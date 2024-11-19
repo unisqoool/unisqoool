@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-12 md:py-16 px-6">
+    <footer className="bg-white text-black py-12 md:py-16 px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Quick Links */}
@@ -163,7 +163,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-gray-600 border-t pt-8">
-          ©2024 UNisqoool. All rights reserved.
+          ©{new Date().getFullYear()} UNisqoool. All rights reserved.
         </div>
       </div>
     </footer>

@@ -33,7 +33,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="bg-white text-black hidden md:flex items-center space-x-4">
             <Button variant="outline" className="border-2">
               Contact Us
             </Button>

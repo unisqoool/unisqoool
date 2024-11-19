@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -140,7 +141,17 @@ export default function Footer() {
 
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">UNisqoool</h3>
+            <Link
+              href="/"
+              className="flex justify-start w-30"
+            >
+              <Image
+                src="/assets/logo.png"
+                alt="Logo"
+                width={150}
+                height={85}
+              />
+            </Link>
             <ul className="space-y-2">
               <li className="text-gray-600">
                 Email:{" "}

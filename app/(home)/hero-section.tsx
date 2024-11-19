@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import HeroSVG from "@/public/assets/person-studying-online.svg";
 
 export default function HeroSection() {
   return (
@@ -10,18 +10,18 @@ export default function HeroSection() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <Card className="bg-transparent border-none shadow-none">
+          <Card className="bg-transparent border-none shadow-none lg:ms-4">
             <CardContent className="space-y-6 text-center lg:text-left p-0">
-              <p className="text-lg md:text-xl text-gray-600 uppercase tracking-wide">
-                YOUR TAG LINE
-              </p>
+              {/* <p className="text-lg md:text-xl text-gray-600 uppercase tracking-wide">
+                Personalized education. Online.
+              </p> */}
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                A big heading that talks about your vision and/or mission
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-nunito leading-tight">
+                Learn Without Limits, Achieve Beyond Boundaries
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-600">
-                A sub-heading that follows the heading
+              <p className="text-xl md:text-2xl text-gray-600 font-mansalva">
+                Transforming Education, One Lesson at a Time.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -47,19 +47,20 @@ export default function HeroSection() {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="relative aspect-[4/3] w-full max-w-xl mx-auto">
+            <div className="relative w-full max-w-2xl mx-auto">
               <Image
-                src="/assets/happy-students.avif"
-                alt="Decorative mountain peaks"
-                fill
-                className="object-contain"
+                src={HeroSVG}
+                alt="Person studying online"
+                width={600}
+                height={450}
+                className="object-fill w-[1350px]"
                 priority
               />
 
               {/* Badge */}
-              <Badge
+              {/* <Badge
                 variant="default"
-                className="absolute -top-6 -right-6 md:top-0 md:-right-12 bg-black text-white rounded-full p-6 transform rotate-12"
+                className="absolute -top-6 -right-3 md:top-0 md:-right-12 bg-black text-white rounded-full p-6 transform rotate-12"
               >
                 <p className="text-sm font-medium leading-tight text-center">
                   500+
@@ -68,7 +69,7 @@ export default function HeroSection() {
                   <br />
                   Students
                 </p>
-              </Badge>
+              </Badge> */}
             </div>
           </div>
         </div>

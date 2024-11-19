@@ -37,7 +37,7 @@ export default function FAQSection() {
   return (
     <section className="bg-white text-black py-16 px-4 md:py-24">
       <div className="container mx-auto max-w-3xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito">
           Frequently Asked Questions
         </h2>
         <FAQList faqs={faqs} initialCount={3} />

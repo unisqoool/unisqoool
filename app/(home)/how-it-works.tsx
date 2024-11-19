@@ -7,37 +7,37 @@ const steps = [
     number: "1",
     title: "Book a slot",
     description:
-      "Small description about this step in no more than three lines at this size",
+      "Secure your preferred time and reserve a spot for a personalized learning session tailored to your needs.",
   },
   {
     number: "2",
     title: "Attend Trial Class",
     description:
-      "Small description about this step in no more than four lines at this size",
+      "Experience a free trial session to explore our teaching methods and decide if it's the right fit for you.",
   },
   {
     number: "3",
     title: "Get Custom Plan",
     description:
-      "Small description about this step in no more than four lines at this size",
+      "Receive a personalized learning plan designed to match your goals, pace, and preferences for maximum progress.",
   },
   {
     number: "4",
     title: "Regular Classes Begin",
     description:
-      "Small description about this step in no more than four lines at this size",
+      "Join our regular classes and embark on your learning journey with expert instructors and a structured curriculum.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="py-16 px-4 md:py-24 md:px-8">
+    <section className="py-16 px-4 md:px-8">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center font-nunito">
           How It Works
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl mx-auto mb-12 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl mx-auto mb-12 gap-8 pt-16 lg:pt-28 lg:pb-8">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -68,11 +68,11 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center">
           <Button
             asChild
             size="lg"
-            className="bg-black text-white hover:bg-black/90 px-8"
+            className="bg-black text-lg text-white hover:bg-black/90 px-8 lg:mb-8"
           >
             <Link href="/get-started">Get Started Now</Link>
           </Button>

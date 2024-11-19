@@ -8,9 +8,9 @@ import { Card, CardContent } from "@/components/ui/card";
 interface SubjectData {
   title: string;
   description: string;
-  bulletPoints: string[];
+  bulletPoints?: string[];
   specialCourses: string[];
-  grades: string[];
+  grades?: string[];
 }
 
 interface SubjectTabsProps {
@@ -24,14 +24,14 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
     <Tabs
       value={activeTab}
       onValueChange={setActiveTab}
-      className="w-full max-w-6xl mx-auto"
+      className="w-full max-w-screen-lg mx-auto flex flex-col gap-8"
     >
-      <TabsList className="w-full flex justify-start mb-8 border-b">
+      <TabsList className="flex flex-wrap justify-center bg-transparent gap-2 mb-8">
         {Object.keys(subjectsData).map((subject) => (
           <TabsTrigger
             key={subject}
             value={subject}
-            className="flex-1 px-4 py-2 text-sm font-medium text-center border-b-2 border-transparent hover:border-gray-300 focus:outline-none"
+            className="bg-gray-100 flex-shrink-0 px-3 py-2 text-lg font-medium text-center border-b-2 border-transparent hover:border-gray-300 focus:outline-none sm:flex-1"
             style={{
               borderBottomColor:
                 activeTab === subject ? "black" : "transparent",
@@ -51,11 +51,12 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
                   <h3 className="text-4xl font-bold">{data.title}</h3>
                   <p className="text-gray-600">{data.description}</p>
                   <ul className="space-y-2">
-                    {data.bulletPoints.map((point, index) => (
-                      <li key={index} className="text-gray-600">
-                        • {point}
-                      </li>
-                    ))}
+                    {!!data.bulletPoints &&
+                      data.bulletPoints.map((point, index) => (
+                        <li key={index} className="text-gray-600">
+                          • {point}
+                        </li>
+                      ))}
                   </ul>
                 </div>
 
@@ -72,17 +73,19 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {data.grades.map((grade, index) => (
-                      <Button
-                        key={index}
-                        variant="outline"
-                        className="border-2"
-                      >
-                        {grade}
-                      </Button>
-                    ))}
-                  </div>
+                  {!!data.grades && data.grades.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {data.grades.map((grade, index) => (
+                        <Button
+                          key={index}
+                          variant="outline"
+                          className="border-2"
+                        >
+                          {grade}
+                        </Button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>

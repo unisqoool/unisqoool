@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, TouchEvent } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,8 @@ export default function TestimonialCarousel({
 }: TestimonialCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -75,19 +77,32 @@ export default function TestimonialCarousel({
     );
   };
 
-  return (
-    <div className="relative flex items-center" ref={carouselRef}>
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={previousTestimonial}
-        className="rounded-full mr-4 z-10"
-      >
-        <ChevronLeft className="h-4 w-4" />
-        <span className="sr-only">Previous testimonial</span>
-      </Button>
+  const handleTouchStart = (e: TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
 
-      <div className="overflow-hidden flex-grow">
+  const handleTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      nextTestimonial();
+    }
+
+    if (touchStart - touchEnd < -75) {
+      previousTestimonial();
+    }
+  };
+
+  return (
+    <div className="relative w-full max-w-2xl mx-auto" ref={carouselRef}>
+      <div
+        className="overflow-hidden w-full"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -95,11 +110,14 @@ export default function TestimonialCarousel({
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
-              className="bg-white shadow-sm flex-shrink-0 w-full"
+              className="flex-shrink-0 w-full bg-white shadow-sm"
             >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative w-20 h-20 flex-shrink-0">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-gray-600 text-center mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="flex flex-col items-center">
+                  <div className="relative w-20 h-20 mb-4">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -107,14 +125,9 @@ export default function TestimonialCarousel({
                       className="object-cover rounded-full"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-gray-600">{testimonial.quote}</p>
-                    <div className="font-semibold">
-                      {testimonial.name}
-                      <span className="block text-sm text-gray-500">
-                        {testimonial.grade}
-                      </span>
-                    </div>
+                  <div className="text-center">
+                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500">{testimonial.grade}</p>
                   </div>
                 </div>
               </CardContent>
@@ -122,16 +135,26 @@ export default function TestimonialCarousel({
           ))}
         </div>
       </div>
-
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={nextTestimonial}
-        className="rounded-full ml-4 z-10"
-      >
-        <ChevronRight className="h-4 w-4" />
-        <span className="sr-only">Next testimonial</span>
-      </Button>
+      <div className="flex justify-center mt-4 space-x-4">
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={previousTestimonial}
+          className="rounded-full"
+        >
+          <ChevronLeft className="h-4 w-4" />
+          <span className="sr-only">Previous testimonial</span>
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={nextTestimonial}
+          className="rounded-full"
+        >
+          <ChevronRight className="h-4 w-4" />
+          <span className="sr-only">Next testimonial</span>
+        </Button>
+      </div>
     </div>
   );
 }

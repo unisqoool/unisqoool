@@ -15,6 +15,10 @@ const config: Config = {
         "usq-peach": "#fdca9b",
         "usq-teal": "#01c2cc",
         "usq-cerulean": "#0081a7",
+        "usq-faded-red": "#fea8a1",
+        "usq-faded-peach": "#fff3e8",
+        "usq-blue-black": "#283044",
+        "usq-sky": "#a0e1e5",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

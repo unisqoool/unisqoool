@@ -43,7 +43,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Unisqoool",
+  title: "UNisqoool",
   description: "Learn Without Limits, Achieve Beyond Boundaries.",
 };
 
@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${nunitoSans.variable} ${podkova.variable} ${mansalva.variable} antialiased  font-nunito-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${nunitoSans.variable} ${podkova.variable} ${mansalva.variable} antialiased m-0 p-0 font-nunito-sans`}
       >
         <Header />
         <main className="min-h-[60vh]">{children}</main>

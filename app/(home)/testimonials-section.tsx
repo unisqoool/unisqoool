@@ -3,27 +3,43 @@ import TestimonialCarousel from "./testimonial-carousel";
 const testimonials = [
   {
     id: 1,
-    name: "Harry Potter",
-    grade: "10, Student",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Priya",
+    grade: "Aspiring Software Developer",
+    image: "/assets/avatars/Priya.jpg",
     quote:
-      "A testimonial that sounds very inspirational, and tells prospective students why they should pay for your courses, it can be long, but not too long as people don't read them. Make them medium-sized yet impactful.",
+      "I always struggled with coding, but Unisqoool's hands-on approach and step-by-step guidance changed everything. After completing their interactive Python course, I was able to build my first app. Now, I’ve secured an internship at a tech company! Unisqoool didn’t just teach me how to code, it helped me believe in my potential.",
   },
   {
     id: 2,
-    name: "Hermione Granger",
-    grade: "12, Student",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Arjun",
+    grade: "High School Student - Math Enthusiast",
+    image: "/assets/avatars/Arjun.jpg",
     quote:
-      "The personalized attention and innovative teaching methods have significantly improved my understanding of complex topics. The teachers are always ready to help and make learning enjoyable.",
+      "Math was always my weakest subject until I joined Unisqoool. Their personalized learning plans helped me grasp complex concepts with ease. The interactive lessons and quizzes made learning fun, and my grades improved dramatically. Thanks to Unisqoool, I topped my class and gained confidence in my math skills!",
   },
   {
     id: 3,
-    name: "Ron Weasley",
-    grade: "11, Student",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Maria",
+    grade: " English Learner",
+    image: "/assets/avatars/Maria.jpg",
     quote:
-      "What I love most about UNisqoool is how they make difficult concepts easy to understand. The interactive sessions and practice materials have helped me improve my grades dramatically.",
+      "As a non-native English speaker, I struggled with fluency. Unisqoool’s immersive approach, which blends grammar lessons with real-world conversations, helped me practice daily. Now, I feel confident speaking English and have even secured a job in customer service. The feedback from instructors was always constructive and encouraging.",
+  },
+  {
+    id: 4,
+    name: "Aarav",
+    grade: "Engineering Student - Science Mastery",
+    image: "/assets/avatars/Arav.jpg",
+    quote:
+      "Science always seemed like a daunting subject, but Unisqoool made it engaging. The hands-on experiments and interactive simulations brought theory to life, making it easier to understand. I aced my finals and now feel more confident pursuing my engineering degree. Unisqoool helped me not just learn, but love science!",
+  },
+  {
+    id: 5,
+    name: "Neha",
+    grade: "Business Professional - Hindi Language Learner",
+    image: "/assets/avatars/Neha.jpg",
+    quote:
+      "I’ve always wanted to learn Hindi to connect with my roots and communicate better with my colleagues. Unisqoool’s interactive lessons and cultural insights made learning Hindi so much fun. Within months, I could read, write, and converse fluently in Hindi. It’s been a rewarding experience that opened new doors both professionally and personally.",
   },
 ];
 
@@ -31,7 +47,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-16 px-4 md:py-24 md:px-8 mx-auto max-w-screen-lg">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito">
           Success Stories
         </h2>
 

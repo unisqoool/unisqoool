@@ -39,6 +39,12 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --font-nunito: var(--font-nunito);
+    --font-nunito-sans: var(--font-nunito-sans);
+    --font-podkova: var(--font-podkova);
+    --font-mansalva: var(--font-mansalva);
+    --font-geist-sans: var(--font-geist-sans);
+    --font-geist-mono: var(--font-geist-mono);
   }
   .dark {
     --background: 240 10% 3.9%;

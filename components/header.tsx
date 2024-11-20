@@ -14,14 +14,20 @@ const menuItems = [
 
 export default function Header() {
   return (
-    <header className="border-b lg:px-8 bg-white">
+    <header className="border-b lg:px-8 bg-white sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex justify-center items-center h-[16px]">
-            <Image src="/assets/logo.png" alt="Logo" width={150} height={85} />
+            <Image
+              src="/assets/logo.png"
+              alt="Logo"
+              width={150}
+              height={85}
+              className="w-40"
+            />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
@@ -33,7 +39,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="bg-white text-black hidden md:flex items-center space-x-4">
+          <div className="bg-white text-black hidden lg:flex items-center space-x-4">
             <Button variant="outline" className="border-2">
               Contact Us
             </Button>

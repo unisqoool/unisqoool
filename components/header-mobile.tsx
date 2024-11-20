@@ -20,9 +20,9 @@ export default function MobileMenu({ items }: MobileMenuProps) {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild className="md:hidden">
-        <Button variant="ghost" size="icon">
-          <Menu className="h-6 w-6" />
+      <SheetTrigger asChild className="lg:hidden">
+        <Button variant="ghost" size="icon" className="p-2">
+          <Menu className="w-full h-full text-usq-blue-black" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>

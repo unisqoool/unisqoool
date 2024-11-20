@@ -15,7 +15,7 @@ const menuItems = [
 export default function Header() {
   return (
     <header className="border-b lg:px-8 bg-white sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex justify-center items-center h-[16px]">
             <Image
@@ -23,7 +23,7 @@ export default function Header() {
               alt="Logo"
               width={150}
               height={85}
-              className="w-40"
+              className="w-40 lg:w-52"
             />
           </Link>
 
@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900"
+                className="text-usq-blue-black hover:text-usq-cerulean"
               >
                 {item.label}
               </Link>
@@ -43,7 +43,7 @@ export default function Header() {
             <Button variant="outline" className="border-2">
               Contact Us
             </Button>
-            <Button className="bg-black text-white hover:bg-black/90">
+            <Button variant="primary">
               Book Free Trial
             </Button>
           </div>

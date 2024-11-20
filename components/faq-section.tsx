@@ -9,12 +9,32 @@ const faqs = [
   {
     question: "How long are the class sessions?",
     answer:
-      "Our standard class sessions are 60 minutes long, designed to maintain optimal attention and learning effectiveness.",
+      "Our standard class sessions are 55 minutes long, designed to maintain optimal attention and learning effectiveness.",
   },
   {
-    question: "What subjects do you offer?",
+    question: "What courses do you offer?",
     answer:
-      "We offer a comprehensive range of subjects including Mathematics, Science, English, Hindi, and Coding, catering to different academic levels.",
+      "We offer a comprehensive range of courses across various subjects, including Mathematics, Coding, Science, English, Hindi, and more. We provide courses for all age groups and learning levels, from beginners to advanced learners.",
+  },
+  {
+    question: "Do you offer trial classes?",
+    answer:
+      "Yes! We offer trial sessions for many of our courses. You can attend a free trial to get a feel for the course content, teaching methods, and platform before making a commitment.",
+  },
+  {
+    question: "How are the classes conducted?",
+    answer:
+      "Our classes are conducted online through interactive lessons, live sessions, and recorded content that you can access anytime. We use a mix of multimedia, quizzes, and assignments to keep learning engaging and effective.",
+  },
+  {
+    question: "Can I learn at my own pace?",
+    answer:
+      "Yes, Unisqoool offers flexible learning options. You can learn at your own pace, revisit lessons, and complete assignments as per your schedule. Some courses also have live sessions and group discussions that you can participate in.",
+  },
+  {
+    question: " Are the courses suitable for beginners?",
+    answer:
+      "Absolutely! We offer courses for all levels, from beginner to advanced. Whether you’re new to the subject or looking to deepen your knowledge, we provide the right resources and support to help you succeed.",
   },
   {
     question: "How qualified are your teachers?",
@@ -37,7 +57,7 @@ export default function FAQSection() {
   return (
     <section className="bg-white text-black py-16 px-4 md:py-24">
       <div className="container mx-auto max-w-3xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito text-usq-red">
           Frequently Asked Questions
         </h2>
         <FAQList faqs={faqs} initialCount={3} />

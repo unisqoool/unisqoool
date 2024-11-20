@@ -46,7 +46,8 @@ export default function MobileMenu({ items }: MobileMenuProps) {
             Contact Us
           </Button>
           <Button
-            className="bg-black text-white hover:bg-black/90 w-full"
+            variant="primary"
+            className="w-full"
             onClick={() => setIsOpen(false)}
           >
             Book Free Trial

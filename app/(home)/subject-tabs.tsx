@@ -31,10 +31,9 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
           <TabsTrigger
             key={subject}
             value={subject}
-            className="bg-gray-100 flex-shrink-0 px-3 py-2 text-lg font-medium text-center border-b-2 border-transparent hover:border-gray-300 focus:outline-none sm:flex-1"
+            className="bg-usq-faded-peach text-usq-blue-black flex-shrink-0 px-3 py-2 text-lg font-medium text-center border-b-2 border-transparent hover:border-gray-300 hover:bg-usq-peach focus:bg-usq-peach focus:text-usq-red sm:flex-1 focus:outline-none active:bg-red-500 rounded-lg"
             style={{
-              borderBottomColor:
-                activeTab === subject ? "black" : "transparent",
+              borderColor: activeTab === subject ? "#ef7167" : "transparent",
             }}
           >
             {subjectsData[subject].title}
@@ -44,12 +43,12 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
 
       {Object.entries(subjectsData).map(([key, data]) => (
         <TabsContent key={key} value={key}>
-          <Card className="border rounded-lg">
-            <CardContent className="p-6">
+          <Card className="border rounded-lg mt-8 lg:mt-0">
+            <CardContent className="px-8 py-20">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <h3 className="text-4xl font-bold">{data.title}</h3>
-                  <p className="text-gray-600">{data.description}</p>
+                  <p>{data.description}</p>
                   <ul className="space-y-2">
                     {!!data.bulletPoints &&
                       data.bulletPoints.map((point, index) => (
@@ -63,11 +62,7 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
                 <div className="space-y-6">
                   <div className="flex flex-wrap gap-2">
                     {data.specialCourses.map((course, index) => (
-                      <Button
-                        key={index}
-                        variant="default"
-                        className="bg-black text-white hover:bg-black/90"
-                      >
+                      <Button key={index} variant="primary">
                         {course}
                       </Button>
                     ))}

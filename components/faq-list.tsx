@@ -35,7 +35,7 @@ export default function FAQList({ faqs, initialCount = 3 }: FAQListProps) {
             <AccordionTrigger className="text-xl font-normal text-left cursor-pointer hover:scale-[1.005] hover:no-underline mx-2">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600">
+            <AccordionContent className="text-usq-blue-black">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>

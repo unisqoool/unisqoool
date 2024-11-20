@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-16 px-4 md:py-24 md:px-8 mx-auto max-w-screen-lg">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito text-usq-red">
           Success Stories
         </h2>
 

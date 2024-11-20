@@ -12,12 +12,12 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="w-full lg:w-1/2">
             <Card className="bg-transparent border-none shadow-none">
-              <CardContent className="space-y-6 text-center lg:text-left p-0">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-nunito leading-tight">
+              <CardContent className="space-y-6 text-center lg:text-left p-0 lg:ps-8">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-nunito leading-tight text-usq-blue-black">
                   Learn Without Limits, Achieve Beyond Boundaries
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-600 font-mansalva">
+                <p className="text-xl md:text-2xl font-mansalva pb-8 text-usq-red">
                   Transforming Education, One Lesson at a Time.
                 </p>
 
@@ -25,7 +25,8 @@ export default function HeroSection() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-black text-white hover:bg-black/90 text-lg"
+                    variant="primary"
+                    className="text-lg"
                   >
                     <Link href="/book-trial">Book Your Free Trial</Link>
                   </Button>
@@ -36,7 +37,7 @@ export default function HeroSection() {
                     variant="outline"
                     className="border-2 text-lg"
                   >
-                    {/* Button content */}
+                    <Link href="/curriculum">Explore Curriculum</Link>
                   </Button>
                 </div>
               </CardContent>

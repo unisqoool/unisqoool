@@ -113,7 +113,7 @@ export default function TestimonialCarousel({
               className="flex-shrink-0 w-full bg-white shadow-sm"
             >
               <CardContent className="p-6 flex flex-col items-center">
-                <p className="text-gray-600 text-center mb-6">
+                <p className="text-usq-blue-black text-center mb-6">
                   {testimonial.quote}
                 </p>
                 <div className="flex flex-col items-center">

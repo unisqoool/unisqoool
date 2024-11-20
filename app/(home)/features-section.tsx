@@ -58,7 +58,7 @@ export default function FeaturesSection() {
     <section className="py-16 px-4 md:py-24 md:px-8 bg-usq-faded-peach">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 font-nunito text-usq-red">
             Why Choose UNisqoool?
           </h2>
         </div>
@@ -77,10 +77,10 @@ export default function FeaturesSection() {
                       className={`w-full h-full stroke-2 ${feature.iconClassName}`}
                     />
                   </div>
-                  <h3 className="text-2xl font-bold">{feature.title}</h3>
+                  <h3 className="text-2xl font-bold font-nunito">{feature.title}</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p>{feature.description}</p>
                 </CardContent>
               </Card>
             );

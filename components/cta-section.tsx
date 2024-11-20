@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 
 export default function CTASection() {
   return (
-    <section className="bg-black text-white py-16 md:py-24 px-4">
+    <section className="bg-usq-teal py-16 md:py-24 px-4">
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 font-nunito">
           Let&apos;s Get Started
         </h2>
 
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg mb-8">
           Get started with your personalised learning experience now.
         </p>
 
@@ -17,7 +17,7 @@ export default function CTASection() {
           <Button
             asChild
             size="lg"
-            className="bg-white text-black hover:bg-white/90"
+            variant="secondary"
           >
             <Link href="/book-trial">Book Your Free Trial</Link>
           </Button>
@@ -26,7 +26,6 @@ export default function CTASection() {
             asChild
             size="lg"
             variant="outline"
-            className="bg-dark border-white text-white hover:bg-white/10"
           >
             <Link href="/curriculum">Explore Curriculum</Link>
           </Button>

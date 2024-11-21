@@ -9,7 +9,7 @@ export default function CalBooking() {
       const cal = await getCalApi({ namespace: "trial-class-unisqool" });
       cal("ui", {
         theme: "light",
-        styles: { branding: { brandColor: "#000000" } },
+        styles: { branding: { brandColor: "#0081a7" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });

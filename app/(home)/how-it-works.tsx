@@ -37,6 +37,17 @@ export default function HowItWorks() {
           How It Works
         </h2>
 
+        <iframe
+          width="50%"
+          height="50%"
+          src="https://www.youtube.com/embed/WO2b03Zdu4Q?si=Itpc03Q1OdH7mybu"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="mx-auto mt-8 aspect-video w-[300px] lg:w-[750px] border-2 border-usq-red rounded-xl"
+        />
+
         <div className="flex flex-col lg:flex-row justify-between items-start max-w-6xl mx-auto mb-12 gap-8 pt-16 lg:pt-28 lg:pb-8">
           {steps.map((step, index) => (
             <div
@@ -47,7 +58,9 @@ export default function HowItWorks() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-usq-cerulean text-white text-2xl font-bold mb-4">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <h3 className="text-xl font-bold mb-2 font-podkova">
+                  {step.title}
+                </h3>
                 <p className="text-gray-600 max-w-xs mx-auto">
                   {step.description}
                 </p>
@@ -69,12 +82,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="text-center">
-          <Button
-            asChild
-            size="lg"
-            variant="secondary"
-            className="text-lg"
-          >
+          <Button asChild size="lg" variant="secondary" className="text-lg">
             <Link href="/get-started">Get Started Now</Link>
           </Button>
         </div>

@@ -77,7 +77,7 @@ export default function FeaturesSection() {
                       className={`w-full h-full stroke-2 ${feature.iconClassName}`}
                     />
                   </div>
-                  <h3 className="text-2xl font-bold font-nunito">{feature.title}</h3>
+                  <h3 className="text-2xl font-bold font-podkova">{feature.title}</h3>
                 </CardHeader>
                 <CardContent>
                   <p>{feature.description}</p>

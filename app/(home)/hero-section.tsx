@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="container mx-auto">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:min-w-[576px] lg:w-1/2">
             <Card className="bg-transparent border-none shadow-none">
               <CardContent className="space-y-6 text-center lg:text-left p-0 lg:ps-8">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-nunito leading-tight text-usq-blue-black">

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { toSnakeCase } from "@/lib/functions/toSnakeCase";
 
 interface SubjectData {
   title: string;
@@ -62,22 +64,30 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
                 <div className="space-y-6">
                   <div className="flex flex-wrap gap-2">
                     {data.specialCourses.map((course, index) => (
-                      <Button key={index} variant="primary">
-                        {course}
-                      </Button>
+                      <Link
+                        key={index}
+                        href={`/${toSnakeCase(data.title)}/${toSnakeCase(
+                          course
+                        )}`}
+                      >
+                        <Button variant="primary">{course}</Button>
+                      </Link>
                     ))}
                   </div>
 
                   {!!data.grades && data.grades.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {data.grades.map((grade, index) => (
-                        <Button
+                        <Link
                           key={index}
-                          variant="outline"
-                          className="border-2"
+                          href={`/${toSnakeCase(data.title)}/${toSnakeCase(
+                            grade
+                          )}`}
                         >
-                          {grade}
-                        </Button>
+                          <Button variant="outline" className="border-2">
+                            {grade}
+                          </Button>
+                        </Link>
                       ))}
                     </div>
                   )}

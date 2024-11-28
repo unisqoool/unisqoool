@@ -1,13 +1,20 @@
 "use client";
 
-import { toSentenceCase } from "@/lib/functions/toSentenceCase";
-import { useParams } from "next/navigation";
+import { getSubjectTitleFromId } from "@/lib/data/subjects";
+import { redirect, useParams } from "next/navigation";
 
 export default function Subject() {
   const { subject } = useParams();
+  const subjectId = Array.isArray(subject) ? subject[0] : subject;
+  const subjectTitle = getSubjectTitleFromId(subjectId);
+
+  if (!subjectTitle) {
+    return redirect("/")
+  }
+
   return (
     <>
-      <h1>{toSentenceCase(subject as string)}</h1>
+      <h1>{subjectTitle}</h1>
     </>
   );
 }

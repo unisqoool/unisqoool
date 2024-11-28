@@ -5,21 +5,10 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { toSnakeCase } from "@/lib/functions/toSnakeCase";
+import { subjectsData } from "@/lib/data/subjects";
+import { coursesData } from "@/lib/data/courses";
 
-interface SubjectData {
-  title: string;
-  description: string;
-  bulletPoints?: string[];
-  specialCourses: string[];
-  grades?: string[];
-}
-
-interface SubjectTabsProps {
-  subjectsData: { [key: string]: SubjectData };
-}
-
-export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
+export default function SubjectTabs() {
   const [activeTab, setActiveTab] = useState("mathematics");
 
   return (
@@ -63,34 +52,43 @@ export default function SubjectTabs({ subjectsData }: SubjectTabsProps) {
 
                 <div className="space-y-6">
                   <div className="flex flex-wrap gap-2">
-                    {data.specialCourses.map((course, index) => (
-                      <Link
-                        key={index}
-                        href={`/${toSnakeCase(data.title)}/${toSnakeCase(
-                          course
-                        )}`}
-                      >
-                        <Button variant="primary">{course}</Button>
-                      </Link>
-                    ))}
+                    {data.courses
+                      .filter((courseId) => {
+                        const course = coursesData[courseId];
+                        return course && course.type !== "grade";
+                      })
+                      .map((courseId) => {
+                        const course = coursesData[courseId];
+                        return (
+                          <Link
+                            key={courseId}
+                            href={`/${data.id}/${course.id}`}
+                          >
+                            <Button variant="primary">{course.title}</Button>
+                          </Link>
+                        );
+                      })}
                   </div>
-
-                  {!!data.grades && data.grades.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                      {data.grades.map((grade, index) => (
-                        <Link
-                          key={index}
-                          href={`/${toSnakeCase(data.title)}/${toSnakeCase(
-                            grade
-                          )}`}
-                        >
-                          <Button variant="outline" className="border-2">
-                            {grade}
-                          </Button>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-2">
+                    {data.courses
+                      .filter((courseId) => {
+                        const course = coursesData[courseId];
+                        return course && course.type === "grade";
+                      })
+                      .map((courseId) => {
+                        const course = coursesData[courseId];
+                        return (
+                          <Link
+                            key={courseId}
+                            href={`/${data.id}/${course.id}`}
+                          >
+                            <Button variant="outline" className="border-2">
+                              {course.title}
+                            </Button>
+                          </Link>
+                        );
+                      })}
+                  </div>
                 </div>
               </div>
             </CardContent>

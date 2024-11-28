@@ -1,0 +1,334 @@
+export interface CourseData {
+  id: string;
+  title: string;
+  description: string;
+  type: "grade" | "competitive" | "special";
+  ageRange?: string;
+  duration?: string;
+  features?: string[];
+}
+
+export const coursesData: { [key: string]: CourseData } = {
+  // Mathematics Courses
+  math_grade_1: {
+    id: "math_grade_1",
+    title: "Grade 1",
+    description: "Foundational mathematics for young learners",
+    type: "grade",
+    ageRange: "5-6",
+    duration: "45 min",
+  },
+  math_grade_2: {
+    id: "math_grade_2",
+    title: "Grade 2",
+    description: "Building on foundational concepts",
+    type: "grade",
+    ageRange: "6-7",
+    duration: "45 min",
+  },
+  math_grade_3: {
+    id: "math_grade_3",
+    title: "Grade 3",
+    description: "Advancing mathematical skills",
+    type: "grade",
+    ageRange: "7-8",
+    duration: "45 min",
+  },
+  math_grade_4: {
+    id: "math_grade_4",
+    title: "Grade 4",
+    description: "Developing problem-solving abilities",
+    type: "grade",
+    ageRange: "8-9",
+    duration: "45 min",
+  },
+  math_grade_5: {
+    id: "math_grade_5",
+    title: "Grade 5",
+    description: "Strengthening mathematical reasoning",
+    type: "grade",
+    ageRange: "9-10",
+    duration: "45 min",
+  },
+  math_grade_6: {
+    id: "math_grade_6",
+    title: "Grade 6",
+    description: "Preparing for advanced mathematics",
+    type: "grade",
+    ageRange: "10-11",
+    duration: "45 min",
+  },
+  math_sat: {
+    id: "math_sat",
+    title: "SAT",
+    description: "Comprehensive SAT math preparation",
+    type: "competitive",
+    features: ["Test strategies", "Practice exams", "Advanced problem-solving"],
+  },
+  math_naplan: {
+    id: "math_naplan",
+    title: "NAPLAN",
+    description: "Preparation for NAPLAN numeracy assessments",
+    type: "competitive",
+    features: [
+      "Aligned with Australian Curriculum",
+      "Practice tests",
+      "Time management skills",
+    ],
+  },
+  math_imo: {
+    id: "math_imo",
+    title: "IMO",
+    description: "Advanced training for mathematical olympiads",
+    type: "competitive",
+    features: [
+      "Problem-solving techniques",
+      "Higher-order thinking",
+      "Competition strategies",
+    ],
+  },
+  math_vedic: {
+    id: "math_vedic",
+    title: "Vedic Mathematics",
+    description: "Ancient Indian system of mental arithmetic",
+    type: "special",
+    features: [
+      "Mental calculation techniques",
+      "Shortcuts for complex calculations",
+      "Applicable to all age groups",
+    ],
+  },
+  math_abacus: {
+    id: "math_abacus",
+    title: "Abacus",
+    description: "Mental math using the abacus tool",
+    type: "special",
+    features: ["Visual learning", "Speed mathematics", "Cognitive development"],
+  },
+
+  // Coding Courses
+  coding_beginners: {
+    id: "coding_beginners",
+    title: "Beginner",
+    description: "Introduction to basic programming concepts",
+    type: "special",
+    ageRange: "8-12",
+    features: [
+      "Block-based coding",
+      "Simple game development",
+      "Logic building",
+    ],
+  },
+  coding_intermediate: {
+    id: "coding_intermediate",
+    title: "Intermediate",
+    description: "Advancing programming skills with text-based languages",
+    type: "special",
+    ageRange: "12-15",
+    features: [
+      "Python basics",
+      "Web development fundamentals",
+      "Simple app creation",
+    ],
+  },
+  coding_advance: {
+    id: "coding_advance",
+    title: "Advanced",
+    description: "Complex programming concepts and project-based learning",
+    type: "special",
+    ageRange: "15-18",
+    features: ["Data structures", "Algorithms", "Full-stack development"],
+  },
+  coding_professional: {
+    id: "coding_professional",
+    title: "Professional",
+    description: "Industry-level programming and software development",
+    type: "special",
+    ageRange: "18+",
+    features: ["Advanced frameworks", "Version control", "Agile methodologies"],
+  },
+
+  // English Courses
+  english_grade_1: {
+    id: "english_grade_1",
+    title: "Grade 1",
+    description: "Building foundational language skills",
+    type: "grade",
+    ageRange: "5-6",
+    duration: "45 min",
+  },
+  english_grade_2: {
+    id: "english_grade_2",
+    title: "Grade 2",
+    description: "Developing reading and writing abilities",
+    type: "grade",
+    ageRange: "6-7",
+    duration: "45 min",
+  },
+  english_grade_3: {
+    id: "english_grade_3",
+    title: "Grade 3",
+    description: "Enhancing comprehension and expression",
+    type: "grade",
+    ageRange: "7-8",
+    duration: "45 min",
+  },
+  english_grade_4: {
+    id: "english_grade_4",
+    title: "Grade 4",
+    description: "Advancing language proficiency",
+    type: "grade",
+    ageRange: "8-9",
+    duration: "45 min",
+  },
+  english_grade_5: {
+    id: "english_grade_5",
+    title: "Grade 5",
+    description: "Refining communication skills",
+    type: "grade",
+    ageRange: "9-10",
+    duration: "45 min",
+  },
+  english_grade_6: {
+    id: "english_grade_6",
+    title: "Grade 6",
+    description: "Preparing for advanced language studies",
+    type: "grade",
+    ageRange: "10-11",
+    duration: "45 min",
+  },
+  english_sat: {
+    id: "english_sat",
+    title: "SAT",
+    description: "Comprehensive SAT English and Writing preparation",
+    type: "competitive",
+    features: ["Critical reading", "Essay writing", "Grammar and usage"],
+  },
+  english_naplan: {
+    id: "english_naplan",
+    title: "NAPLAN",
+    description: "Preparation for NAPLAN literacy assessments",
+    type: "competitive",
+    features: [
+      "Reading comprehension",
+      "Writing tasks",
+      "Language conventions",
+    ],
+  },
+  english_ieo: {
+    id: "english_ieo",
+    title: "IEO",
+    description: "Advanced English skills for olympiad competitions",
+    type: "competitive",
+    features: [
+      "Vocabulary enhancement",
+      "Advanced grammar",
+      "Analytical reading",
+    ],
+  },
+
+  // Science Courses
+  science_grade_1: {
+    id: "science_grade_1",
+    title: "Grade 1",
+    description: "Introduction to basic scientific concepts",
+    type: "grade",
+    ageRange: "5-6",
+    duration: "45 min",
+  },
+  science_grade_2: {
+    id: "science_grade_2",
+    title: "Grade 2",
+    description: "Exploring the natural world",
+    type: "grade",
+    ageRange: "6-7",
+    duration: "45 min",
+  },
+  science_grade_3: {
+    id: "science_grade_3",
+    title: "Grade 3",
+    description: "Understanding scientific processes",
+    type: "grade",
+    ageRange: "7-8",
+    duration: "45 min",
+  },
+  science_grade_4: {
+    id: "science_grade_4",
+    title: "Grade 4",
+    description: "Investigating physical and life sciences",
+    type: "grade",
+    ageRange: "8-9",
+    duration: "45 min",
+  },
+  science_grade_5: {
+    id: "science_grade_5",
+    title: "Grade 5",
+    description: "Advancing scientific inquiry skills",
+    type: "grade",
+    ageRange: "9-10",
+    duration: "45 min",
+  },
+  science_grade_6: {
+    id: "science_grade_6",
+    title: "Grade 6",
+    description: "Preparing for advanced scientific studies",
+    type: "grade",
+    ageRange: "10-11",
+    duration: "45 min",
+  },
+
+  // Hindi Courses
+  hindi_grade_1: {
+    id: "hindi_grade_1",
+    title: "Grade 1",
+    description: "Building foundational Hindi language skills",
+    type: "grade",
+    ageRange: "5-6",
+    duration: "45 min",
+  },
+  hindi_grade_2: {
+    id: "hindi_grade_2",
+    title: "Grade 2",
+    description: "Developing Hindi reading and writing abilities",
+    type: "grade",
+    ageRange: "6-7",
+    duration: "45 min",
+  },
+  hindi_grade_3: {
+    id: "hindi_grade_3",
+    title: "Grade 3",
+    description: "Enhancing Hindi comprehension and expression",
+    type: "grade",
+    ageRange: "7-8",
+    duration: "45 min",
+  },
+  hindi_grade_4: {
+    id: "hindi_grade_4",
+    title: "Grade 4",
+    description: "Advancing Hindi language proficiency",
+    type: "grade",
+    ageRange: "8-9",
+    duration: "45 min",
+  },
+  hindi_grade_5: {
+    id: "hindi_grade_5",
+    title: "Grade 5",
+    description: "Refining Hindi communication skills",
+    type: "grade",
+    ageRange: "9-10",
+    duration: "45 min",
+  },
+  hindi_grade_6: {
+    id: "hindi_grade_6",
+    title: "Grade 6",
+    description: "Preparing for advanced Hindi language studies",
+    type: "grade",
+    ageRange: "10-11",
+    duration: "45 min",
+  },
+};
+
+export const getCourseTitleFromId = (courseId: string) => {
+  const subject = coursesData[courseId];
+  return subject ? subject.title : null;
+};

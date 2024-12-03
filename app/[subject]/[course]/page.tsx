@@ -1,5 +1,6 @@
 "use client";
 
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { getCourseTitleFromId } from "@/lib/data/courses";
 import { getSubjectTitleFromId } from "@/lib/data/subjects";
 import { redirect, useParams } from "next/navigation";
@@ -17,9 +18,12 @@ export default function Course() {
 
   return (
     <>
-      <h1>
-        {subjectTitle} / {courseTitle}
-      </h1>
+      <Breadcrumbs
+        items={[
+          { label: subjectTitle, href: `/${subjectId}` },
+          { label: courseTitle, href: `/${subjectId}/${courseId}` },
+        ]}
+      />
     </>
   );
 }

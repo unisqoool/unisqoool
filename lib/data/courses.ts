@@ -328,7 +328,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
 };
 
-export const getCourseTitleFromId = (courseId: string) => {
+export const getCourseData = (courseId: string) => {
   const subject = coursesData[courseId];
-  return subject ? subject.title : null;
+  return subject ? subject : null;
 };

@@ -90,7 +90,7 @@ export const subjectsData: { [key: string]: SubjectData } = {
   },
 };
 
-export const getSubjectTitleFromId = (subjectId: string) => {
+export const getSubjectData = (subjectId: string) => {
   const subject = subjectsData[subjectId];
-  return subject ? subject.title : null;
+  return subject ? subject : null;
 };

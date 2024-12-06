@@ -24,6 +24,7 @@ export default function Header() {
               width={150}
               height={85}
               className="w-40 lg:w-52"
+              priority
             />
           </Link>
 

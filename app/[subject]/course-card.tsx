@@ -11,32 +11,33 @@ interface CourseCardProps {
 
 export function CourseCard({ course, subjectId }: CourseCardProps) {
   return (
-    <Card className="border rounded-lg overflow-hidden">
-      <CardContent className="p-6">
-        <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-        <p className="text-gray-600 mb-4">{course.description}</p>
-        {course.type === "grade" ? (
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-            <div className="flex items-center gap-1">
+    <Card className="border-2 border-usq-blue-black rounded-lg overflow-hidden py-4">
+      <CardContent className="p-6 text-center">
+        <h3 className="text-xl font-bold mb-2 font-podkova">{course.title}</h3>
+        <p className="text-gray-600 mb-2 font-geist-sans">
+          {course.description}
+        </p>
+        <div className="flex flex-col justify-center items-center gap-2 mb-6">
+          {!!course.duration && (
+            <div className="flex w-full justify-center items-center gap-2 text-sm text-gray-500">
               <Clock className="w-4 h-4" />
               <span>{course.duration} classes</span>
             </div>
-            <div className="flex items-center gap-1">
+          )}
+          {!!course.ageRange && (
+            <div className="flex w-full justify-center items-center gap-2 text-sm text-gray-500 -mt-2">
               <Users className="w-4 h-4" />
               <span>Age: {course.ageRange}</span>
             </div>
-          </div>
-        ) : (
-          <div className="flex flex-wrap gap-2 mb-6">
-            {course.features?.map((feature, index) => (
+          )}
+          {!!course.features &&
+            course.features?.map((feature, index) => (
               <div key={index} className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-blue-500 rounded-full" />
                 <span className="text-sm text-gray-500">{feature}</span>
               </div>
             ))}
-          </div>
-        )}
-        <Button asChild variant="secondary" className="w-full">
+        </div>
+        <Button asChild variant="secondary" className="px-8">
           <Link href={`/${subjectId}/${course.id}`}>View Details</Link>
         </Button>
       </CardContent>

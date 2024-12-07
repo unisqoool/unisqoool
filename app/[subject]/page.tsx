@@ -47,17 +47,17 @@ export default function Subject() {
     }, [courses]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white container mx-auto">
       <Breadcrumbs items={[{ label: subjectTitle, href: `/${subjectId}` }]} />
 
       {/* Banner Section */}
       <div className="w-full h-48 bg-usq-faded-peach" />
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto p-4 lg:p-12">
         {/* Subject Title and Description */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-usq-blue-black mb-2">
+          <h1 className="text-4xl font-bold text-usq-blue-black mb-2 font-podkova">
             {subjectData.title.toUpperCase()}
           </h1>
           <p className="text-gray-600 max-w-3xl">{subjectData.description}</p>
@@ -96,16 +96,16 @@ export default function Subject() {
             onValueChange={(value) => setActiveFilter(value as FilterType)}
             className="mb-12"
           >
-            <TabsList className="bg-transparent border-b w-full justify-start gap-4">
+            <TabsList className="bg-transparent border-b w-full justify-start gap-1 lg:gap-4">
               <TabsTrigger value="all">All</TabsTrigger>
               {gradeCourses.length > 0 && (
-                <TabsTrigger value="grade">By Grade</TabsTrigger>
+                <TabsTrigger value="grade">Grade</TabsTrigger>
               )}
               {competitiveCourses.length > 0 && (
                 <TabsTrigger value="competitive">Competitive</TabsTrigger>
               )}
               {specialCourses.length > 0 && (
-                <TabsTrigger value="special">Special Programs</TabsTrigger>
+                <TabsTrigger value="special">Special</TabsTrigger>
               )}
             </TabsList>
           </Tabs>
@@ -114,11 +114,11 @@ export default function Subject() {
         {/* Grade-wise Section */}
         {(activeFilter === "all" || activeFilter === "grade") &&
           gradeCourses.length > 0 && (
-            <section className="mb-16">
-              <h2 className="text-2xl font-bold mb-8">
+            <section className="mb-16 mx-4">
+              <h2 className="text-2xl font-bold mb-8 font-nunito-sans">
                 Grade-wise {subjectData.title}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {gradeCourses.map((course) => (
                   <CourseCard
                     key={course.id}
@@ -133,11 +133,11 @@ export default function Subject() {
         {/* Competitive Exam Section */}
         {(activeFilter === "all" || activeFilter === "competitive") &&
           competitiveCourses.length > 0 && (
-            <section className="mb-16">
+            <section className="mb-16 mx-4">
               <h2 className="text-2xl font-bold mb-8">
                 Competitive Exam Preparation
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {competitiveCourses.map((course) => (
                   <CourseCard
                     key={course.id}
@@ -152,9 +152,9 @@ export default function Subject() {
         {/* Special Programs Section */}
         {(activeFilter === "all" || activeFilter === "special") &&
           specialCourses.length > 0 && (
-            <section className="mb-16">
+            <section className="mb-16 mx-4">
               <h2 className="text-2xl font-bold mb-8">Special Programs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {specialCourses.map((course) => (
                   <CourseCard
                     key={course.id}

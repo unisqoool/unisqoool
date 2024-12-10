@@ -21,8 +21,8 @@ export default function Header() {
             <Image
               src="/assets/logo.png"
               alt="Logo"
-              width={150}
-              height={85}
+              width={450}
+              height={255}
               className="w-40 lg:w-52"
               priority
             />

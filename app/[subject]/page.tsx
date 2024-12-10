@@ -57,7 +57,7 @@ export default function Subject() {
       <div className="container mx-auto p-4 lg:p-12">
         {/* Subject Title and Description */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-usq-blue-black mb-2 font-podkova">
+          <h1 className="text-5xl font-bold text-usq-red mb-2 font-podkova">
             {subjectData.title.toUpperCase()}
           </h1>
           <p className="text-gray-600 max-w-3xl">{subjectData.description}</p>

@@ -1,3 +1,8 @@
+interface ModuleContent {
+  title: string;
+  contents: string[];
+}
+
 export interface CourseData {
   id: string;
   title: string;
@@ -5,6 +10,12 @@ export interface CourseData {
   type: "grade" | "competitive" | "special";
   ageRange?: string;
   duration?: string;
+  classType?: string;
+  overview?: string;
+  targetAudience?: string[];
+  benefits?: string[];
+  learningOutcomes?: string[];
+  modules?: ModuleContent[];
   features?: string[];
 }
 
@@ -17,6 +28,65 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "5-6",
     duration: "55 min",
+    classType: "1:1 Classes",
+    overview:
+      "Our Grade 1 Mathematics course lays the foundation for mathematical thinking. Through engaging activities and interactive lessons, students will develop a strong number sense, learn basic operations, and explore shapes and measurements.",
+    targetAudience: [
+      "Students aged 5-6 years",
+      "Children entering or in Grade 1",
+      "Young learners interested in building a strong math foundation",
+    ],
+    benefits: [
+      "Develop strong number sense and counting skills",
+      "Learn addition and subtraction with confidence",
+      "Explore shapes and basic geometry concepts",
+      "Build problem-solving and critical thinking skills",
+    ],
+    learningOutcomes: [
+      "Count, read, and write numbers up to 100",
+      "Perform basic addition and subtraction operations",
+      "Recognize and describe basic 2D and 3D shapes",
+      "Understand and use simple measurement concepts",
+    ],
+    modules: [
+      {
+        title: "Module 1",
+        contents: [
+          "Introduction to key concepts",
+          "Basic principles and foundations",
+          "Practice exercises and applications",
+          "Assessment and review",
+        ],
+      },
+      {
+        title: "Module 2",
+        contents: [
+          "Introduction to key concepts",
+          "Basic principles and foundations",
+          "Practice exercises and applications",
+          "Assessment and review",
+        ],
+      },
+      {
+        title: "Module 3",
+        contents: [
+          "Introduction to key concepts",
+          "Basic principles and foundations",
+          "Practice exercises and applications",
+          "Assessment and review",
+        ],
+      },
+      {
+        title: "Module 4",
+        contents: [
+          "Introduction to key concepts",
+          "Basic principles and foundations",
+          "Practice exercises and applications",
+          "Assessment and review",
+        ],
+      },
+      // ... other modules
+    ],
     features: ["Counting, Adding, and More!"],
   },
   math_grade_2: {
@@ -71,6 +141,26 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "competitive",
     ageRange: "12+",
     duration: "55 min",
+    classType: "Small Group Classes",
+    overview:
+      "Our SAT Mathematics Preparation course is designed to equip students with the knowledge, strategies, and confidence needed to excel in the math section of the SAT. Through rigorous practice and targeted instruction, students will master key concepts and test-taking techniques.",
+    targetAudience: [
+      "High school students planning to take the SAT",
+      "Students aiming to improve their SAT math scores",
+      "Learners seeking to strengthen their overall math skills",
+    ],
+    benefits: [
+      "Comprehensive coverage of all SAT math topics",
+      "Strategies for tackling different question types",
+      "Timed practice to improve speed and accuracy",
+      "Personalized feedback and progress tracking",
+    ],
+    learningOutcomes: [
+      "Master algebra, geometry, and trigonometry concepts tested on the SAT",
+      "Develop effective problem-solving strategies for SAT-style questions",
+      "Improve time management skills for the math section",
+      "Gain confidence in tackling challenging math problems",
+    ],
     features: ["Ace Your SAT Math with Confidence"],
   },
   math_naplan: {

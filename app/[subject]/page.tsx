@@ -47,7 +47,7 @@ export default function Subject() {
     }, [courses]);
 
   return (
-    <div className="bg-white container mx-auto">
+    <div className="bg-white mx-auto">
       <Breadcrumbs items={[{ label: subjectTitle, href: `/${subjectId}` }]} />
 
       {/* Banner Section */}

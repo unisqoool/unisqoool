@@ -78,7 +78,7 @@ export default function Course() {
       <div className="container mx-auto px-4 lg:px-12 py-12">
         {/* Course Overview */}
         <section className="mb-12">
-          <h2 className="text-4xl font-bold mb-8 font-nunito">
+          <h2 className="text-4xl font-bold mb-2 font-nunito">
             Course Overview
           </h2>
           <p className="text-usq-blue-black/80 lg:text-xl">

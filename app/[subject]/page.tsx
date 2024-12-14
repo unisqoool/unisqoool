@@ -51,7 +51,14 @@ export default function Subject() {
       <Breadcrumbs items={[{ label: subjectTitle, href: `/${subjectId}` }]} />
 
       {/* Banner Section */}
-      <div className="w-full h-48 bg-usq-faded-peach" />
+      <div
+        className="w-full h-72 bg-usq-faded-peach"
+        style={{
+          backgroundImage: `url(/assets/subject-banner/${subjectId}.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "top"
+        }}
+      />
 
       {/* Main Content */}
       <div className="container mx-auto p-4 lg:p-12">

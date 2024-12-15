@@ -47,7 +47,7 @@ export default function Course() {
       />
 
       {/* Hero Section */}
-      <div className="bg-usq-faded-peach py-12 ps-2">
+      <div className="bg-usq-faded-peach py-12 ps-8">
         <div className="container mx-auto px-4 text-center lg:text-start lg:px-0">
           <h1 className="text-5xl lg:text-6xl text-usq-red font-bold mb-6 font-podkova">
             {`${courseTitle} ${subjectTitle}`}

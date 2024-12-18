@@ -46,9 +46,9 @@ export default function AboutUs() {
           </p>
         </div>
 
-        {/* Mission Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-16 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center text-center gap-6">
+          {/* Mission Section */}
+          <div className="flex flex-col items-center text-center gap-4 w-full">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-usq-faded-peach flex items-center justify-center">
                 <Target className="w-8 h-8 text-usq-red" />
@@ -58,7 +58,7 @@ export default function AboutUs() {
               <h2 className="text-2xl font-bold text-usq-red font-nunito mb-4">
                 Our Mission
               </h2>
-              <p className="text-lg text-usq-blue-black/70 text-center lg:text-justify">
+              <p className="text-lg text-usq-blue-black/70 text-center">
                 Unisqoool leverages innovative technology to provide engaging,
                 interactive learning experiences that inspire curiosity and
                 drive lifelong achievement.
@@ -67,7 +67,7 @@ export default function AboutUs() {
           </div>
 
           {/* Vision Section */}
-          <div className="flex flex-col items-center text-center gap-6">
+          <div className="flex flex-col items-center text-center gap-4 w-full">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-usq-faded-peach flex items-center justify-center">
                 <Eye className="w-8 h-8 text-usq-red" />
@@ -77,7 +77,7 @@ export default function AboutUs() {
               <h2 className="text-2xl font-bold text-usq-red font-nunito mb-4">
                 Our Vision
               </h2>
-              <p className="text-lg text-usq-blue-black/70 text-center lg:text-justify">
+              <p className="text-lg text-usq-blue-black/70 text-center">
                 To empower learners worldwide with accessible, personalized
                 education that fosters growth and success.
               </p>
@@ -152,7 +152,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-usq-cerulean text-center lg:text-start mb-4">
                   Shanku Vashisht
                 </h3>
-                <p className="text-blue-black text-justify">
+                <p className="text-usq-blue-black/70 text-justify">
                   <strong>Unisqool</strong> is on a mission to make learning not
                   just effective, but a full-on celebration! Co-founder Shanku
                   Vashisht, a supermom of two, has over 10 years of math
@@ -188,7 +188,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-usq-cerulean mb-4">
                   Dhurvi Patel
                 </h3>
-                <p className="text-blue-black text-justify">
+                <p className="text-usq-blue-black/70 text-justify">
                   Dhruvi Patel Dutt, a History and Sanskrit graduate from Delhi
                   University, is a multi-talented force of nature – a Karate
                   black belt, basketball champ, and thrill-seeker who believes
@@ -226,7 +226,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-usq-cerulean mb-4">
                   Upasna Chatterjee
                 </h3>
-                <p className="text-blue-black text-justify">
+                <p className="text-usq-blue-black/70 text-justify">
                   Meet Upasna Chatterjee, a Delhi native with a golden pen (her
                   parents are the true masterminds behind that, not some fancy
                   silver spoon)! Armed with double masters in Political Science

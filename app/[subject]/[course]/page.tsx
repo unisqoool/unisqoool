@@ -146,7 +146,7 @@ export default function Course() {
           )}
       </div>
 
-      <BookTrialSection />
+      <BookTrialSection subject={subjectId} course={courseTitle} />
 
       {courseData.modules && courseData.modules.length > 0 && (
         <section className="my-12 container mx-auto text-center flex flex-col justify-center max-w-3xl text-usq-blue-black">

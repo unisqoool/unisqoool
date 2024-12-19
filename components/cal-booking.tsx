@@ -3,7 +3,14 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
-export default function CalBooking() {
+interface IProps {
+  subject: string;
+  course?: string;
+}
+
+export default function CalBooking({ subject, course }: IProps) {
+  const calLink = `unisqoool/${subject}${!!course ? `?course=${course}` : ""}`;
+
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "trial-class-unisqool" });
@@ -15,10 +22,11 @@ export default function CalBooking() {
       });
     })();
   }, []);
+
   return (
     <Cal
       namespace="trial-class-unisqool"
-      calLink="abhirup-basu/trial-class-unisqool"
+      calLink={calLink}
       style={{ width: "100%", height: "100%", overflow: "scroll" }}
       config={{ layout: "month_view" }}
     />

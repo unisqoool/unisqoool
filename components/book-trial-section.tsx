@@ -1,6 +1,11 @@
 import CalBooking from "@/components/cal-booking";
 
-export default function BookTrialSection() {
+interface IProps {
+  subject: string;
+  course?: string
+}
+
+export default function BookTrialSection({ subject, course }: IProps) {
   return (
     <section className="py-16 px-4 md:py-24 md:px-8 bg-usq-faded-peach">
       <div className="container mx-auto">
@@ -10,7 +15,7 @@ export default function BookTrialSection() {
           </h2>
         </div>
 
-        <CalBooking />
+        <CalBooking subject={subject} course={course} />
       </div>
     </section>
   );

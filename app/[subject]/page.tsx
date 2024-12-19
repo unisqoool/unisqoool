@@ -9,6 +9,7 @@ import Link from "next/link";
 import { redirect, useParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { CourseCard } from "./course-card";
+import BookTrialSection from "@/components/book-trial-section";
 
 type FilterType = "all" | "grade" | "competitive" | "special";
 
@@ -56,7 +57,7 @@ export default function Subject() {
         style={{
           backgroundImage: `url(/assets/subject-banner/${subjectId}.jpg)`,
           backgroundSize: "cover",
-          backgroundPosition: "top"
+          backgroundPosition: "top",
         }}
       />
 
@@ -172,6 +173,8 @@ export default function Subject() {
               </div>
             </section>
           )}
+
+        <BookTrialSection subject={subjectId} />
       </div>
     </div>
   );

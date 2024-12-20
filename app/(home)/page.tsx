@@ -1,3 +1,4 @@
+import BookTrialSection from "@/components/book-trial-section";
 import FeaturesSection from "./features-section";
 import HeroSection from "./hero-section";
 import HowItWorks from "./how-it-works";
@@ -11,7 +12,7 @@ export default function Home() {
       <FeaturesSection />
       <SubjectsSection />
       <HowItWorks />
-      {/* <BookTrialSection /> */}
+      <BookTrialSection />
       <TestimonialsSection />
     </>
   );

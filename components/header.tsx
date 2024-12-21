@@ -10,6 +10,7 @@ const menuItems = [
   { href: "/english", label: "English" },
   { href: "/science", label: "Science" },
   { href: "/hindi", label: "Hindi" },
+  { href: "/short-courses", label: "Short Courses" },
 ];
 
 export default function Header() {
@@ -44,9 +45,7 @@ export default function Header() {
             <Button variant="outline" className="border-2">
               Contact Us
             </Button>
-            <Button variant="primary">
-              Book Free Trial
-            </Button>
+            <Button variant="primary">Book Free Trial</Button>
           </div>
 
           <MobileMenu items={menuItems} />

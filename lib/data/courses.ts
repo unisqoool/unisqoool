@@ -463,3 +463,9 @@ export const getCourseData = (courseId: string) => {
   const subject = coursesData[courseId];
   return subject ? subject : null;
 };
+
+export const getCourseDataBySubjectId = (subjectId: string): CourseData[] => {
+  return Object.values(coursesData).filter(
+    (course) => course.subjectId === subjectId
+  );
+};

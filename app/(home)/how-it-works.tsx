@@ -37,7 +37,7 @@ export default function HowItWorks() {
           How It Works
         </h2>
 
-        <iframe
+        {/* <iframe
           width="50%"
           height="50%"
           src="https://www.youtube.com/embed/WO2b03Zdu4Q?si=Itpc03Q1OdH7mybu"
@@ -46,7 +46,7 @@ export default function HowItWorks() {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           className="mx-auto mt-8 aspect-video w-[300px] lg:w-[750px] border-2 border-usq-red rounded-xl"
-        />
+        /> */}
 
         <div className="flex flex-col lg:flex-row justify-between items-start max-w-6xl mx-auto mb-12 gap-8 pt-16 lg:pt-28 lg:pb-8">
           {steps.map((step, index) => (

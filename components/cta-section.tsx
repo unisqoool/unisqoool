@@ -25,11 +25,11 @@ export default function CTASection() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 ">
             <Button asChild size="lg" variant="secondary">
-              <Link href="/book-trial">Book Your Free Trial</Link>
+              <Link href="/#book-trial">Book Your Free Trial</Link>
             </Button>
 
             <Button asChild size="lg" variant="outline">
-              <Link href="/curriculum">Explore Curriculum</Link>
+              <Link href="/#our-subjects">Explore Curriculum</Link>
             </Button>
           </div>
         </div>

@@ -10,9 +10,13 @@ export default function Home() {
     <>
       <HeroSection />
       <FeaturesSection />
-      <SubjectsSection />
+      <span id="our-subjects">
+        <SubjectsSection />
+      </span>
       <HowItWorks />
-      <BookTrialSection />
+      <span id="book-trial">
+        <BookTrialSection />
+      </span>
       <TestimonialsSection />
     </>
   );

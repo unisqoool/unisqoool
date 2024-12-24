@@ -5,6 +5,7 @@ interface ModuleContent {
 
 export interface CourseData {
   id: string;
+  subjectId: string;
   title: string;
   description: string;
   type: "grade" | "competitive" | "special";
@@ -23,6 +24,7 @@ export const coursesData: { [key: string]: CourseData } = {
   // Mathematics Courses
   math_grade_1: {
     id: "math_grade_1",
+    subjectId: "mathematics",
     title: "Grade 1",
     description: "Foundational mathematics for young learners",
     type: "grade",
@@ -90,6 +92,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_grade_2: {
     id: "math_grade_2",
+    subjectId: "mathematics",
     title: "Grade 2",
     description: "Building on foundational concepts",
     type: "grade",
@@ -112,6 +115,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_grade_3: {
     id: "math_grade_3",
+    subjectId: "mathematics",
     title: "Grade 3",
     description: "Advancing mathematical skills",
     type: "grade",
@@ -133,6 +137,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_grade_4: {
     id: "math_grade_4",
+    subjectId: "mathematics",
     title: "Grade 4",
     description: "Developing problem-solving abilities",
     type: "grade",
@@ -154,6 +159,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_grade_5: {
     id: "math_grade_5",
+    subjectId: "mathematics",
     title: "Grade 5",
     description: "Solving Bigger Problems with Math",
     type: "grade",
@@ -175,6 +181,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_grade_6: {
     id: "math_grade_6",
+    subjectId: "mathematics",
     title: "Grade 6",
     description: "Advanced Math Skills for Future Success",
     type: "grade",
@@ -196,6 +203,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_sat: {
     id: "math_sat",
+    subjectId: "mathematics",
     title: "SAT",
     description: "Comprehensive SAT math preparation",
     type: "competitive",
@@ -225,6 +233,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_naplan: {
     id: "math_naplan",
+    subjectId: "mathematics",
     title: "NAPLAN",
     description: "Preparation for NAPLAN numeracy assessments",
     type: "competitive",
@@ -234,6 +243,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_imo: {
     id: "math_imo",
+    subjectId: "mathematics",
     title: "IMO",
     description: "Advanced training for International Mathematics Olympiad",
     type: "competitive",
@@ -243,6 +253,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_abacus: {
     id: "math_abacus",
+    subjectId: "mathematics",
     title: "Abacus",
     description: "Mental math using the abacus tool",
     type: "special",
@@ -252,6 +263,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   math_vedic: {
     id: "math_vedic",
+    subjectId: "mathematics",
     title: "Vedic Mathematics",
     description: "Ancient Indian system of mental arithmetic",
     type: "special",
@@ -263,6 +275,7 @@ export const coursesData: { [key: string]: CourseData } = {
   // Coding Courses
   coding_beginners: {
     id: "coding_beginners",
+    subjectId: "coding",
     title: "Beginner",
     description: "Introduction to basic programming concepts",
     type: "special",
@@ -287,6 +300,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   coding_intermediate: {
     id: "coding_intermediate",
+    subjectId: "coding",
     title: "Intermediate",
     description: "Advancing programming skills with text-based languages",
     type: "special",
@@ -311,6 +325,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   coding_advance: {
     id: "coding_advance",
+    subjectId: "coding",
     title: "Advanced",
     description: "Complex programming concepts and project-based learning",
     type: "special",
@@ -331,6 +346,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   coding_professional: {
     id: "coding_professional",
+    subjectId: "coding",
     title: "Professional",
     description: "Industry-level programming and software development",
     type: "special",
@@ -353,6 +369,7 @@ export const coursesData: { [key: string]: CourseData } = {
   // English Courses
   english_grade_1: {
     id: "english_grade_1",
+    subjectId: "english",
     title: "Grade 1",
     description: "Building foundational language skills",
     type: "grade",
@@ -373,6 +390,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_grade_2: {
     id: "english_grade_2",
+    subjectId: "english",
     title: "Grade 2",
     description: "Developing reading and writing abilities",
     type: "grade",
@@ -393,6 +411,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_grade_3: {
     id: "english_grade_3",
+    subjectId: "english",
     title: "Grade 3",
     description: "Enhancing comprehension and expression",
     type: "grade",
@@ -413,6 +432,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_grade_4: {
     id: "english_grade_4",
+    subjectId: "english",
     title: "Grade 4",
     description: "Advancing language proficiency",
     type: "grade",
@@ -433,6 +453,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_grade_5: {
     id: "english_grade_5",
+    subjectId: "english",
     title: "Grade 5",
     description: "Refining communication skills",
     type: "grade",
@@ -453,6 +474,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_grade_6: {
     id: "english_grade_6",
+    subjectId: "english",
     title: "Grade 6",
     description: "Preparing for advanced language studies",
     type: "grade",
@@ -473,6 +495,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_sat: {
     id: "english_sat",
+    subjectId: "english",
     title: "SAT",
     description: "Comprehensive SAT English and Writing preparation",
     type: "competitive",
@@ -480,6 +503,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_naplan: {
     id: "english_naplan",
+    subjectId: "english",
     title: "NAPLAN",
     description: "Preparation for NAPLAN literacy assessments",
     type: "competitive",
@@ -491,6 +515,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   english_ieo: {
     id: "english_ieo",
+    subjectId: "english",
     title: "IEO",
     description: "Advanced English skills for olympiad competitions",
     type: "competitive",
@@ -504,6 +529,7 @@ export const coursesData: { [key: string]: CourseData } = {
   // Science Courses
   science_grade_1: {
     id: "science_grade_1",
+    subjectId: "science",
     title: "Grade 1",
     description: "Introduction to basic scientific concepts",
     type: "grade",
@@ -524,6 +550,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   science_grade_2: {
     id: "science_grade_2",
+    subjectId: "science",
     title: "Grade 2",
     description: "Exploring the natural world",
     type: "grade",
@@ -544,6 +571,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   science_grade_3: {
     id: "science_grade_3",
+    subjectId: "science",
     title: "Grade 3",
     description: "Understanding scientific processes",
     type: "grade",
@@ -564,6 +592,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   science_grade_4: {
     id: "science_grade_4",
+    subjectId: "science",
     title: "Grade 4",
     description: "Investigating physical and life sciences",
     type: "grade",
@@ -584,6 +613,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   science_grade_5: {
     id: "science_grade_5",
+    subjectId: "science",
     title: "Grade 5",
     description: "Advancing scientific inquiry skills",
     type: "grade",
@@ -604,6 +634,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   science_grade_6: {
     id: "science_grade_6",
+    subjectId: "science",
     title: "Grade 6",
     description: "Preparing for advanced scientific studies",
     type: "grade",
@@ -626,6 +657,7 @@ export const coursesData: { [key: string]: CourseData } = {
   // Hindi Courses
   hindi_grade_1: {
     id: "hindi_grade_1",
+    subjectId: "hindi",
     title: "Grade 1",
     description: "Building foundational Hindi language skills",
     type: "grade",
@@ -646,6 +678,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   hindi_grade_2: {
     id: "hindi_grade_2",
+    subjectId: "hindi",
     title: "Grade 2",
     description: "Developing Hindi reading and writing abilities",
     type: "grade",
@@ -666,6 +699,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   hindi_grade_3: {
     id: "hindi_grade_3",
+    subjectId: "hindi",
     title: "Grade 3",
     description: "Enhancing Hindi comprehension and expression",
     type: "grade",
@@ -686,6 +720,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   hindi_grade_4: {
     id: "hindi_grade_4",
+    subjectId: "hindi",
     title: "Grade 4",
     description: "Advancing Hindi language proficiency",
     type: "grade",
@@ -706,6 +741,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   hindi_grade_5: {
     id: "hindi_grade_5",
+    subjectId: "hindi",
     title: "Grade 5",
     description: "Refining Hindi communication skills",
     type: "grade",
@@ -726,6 +762,7 @@ export const coursesData: { [key: string]: CourseData } = {
   },
   hindi_grade_6: {
     id: "hindi_grade_6",
+    subjectId: "hindi",
     title: "Grade 6",
     description: "Preparing for advanced Hindi language studies",
     type: "grade",
@@ -749,4 +786,10 @@ export const coursesData: { [key: string]: CourseData } = {
 export const getCourseData = (courseId: string) => {
   const subject = coursesData[courseId];
   return subject ? subject : null;
+};
+
+export const getCourseDataBySubjectId = (subjectId: string): CourseData[] => {
+  return Object.values(coursesData).filter(
+    (course) => course.subjectId === subjectId
+  );
 };

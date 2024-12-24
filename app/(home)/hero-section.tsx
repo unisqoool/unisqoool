@@ -28,7 +28,7 @@ export default function HeroSection() {
                     variant="primary"
                     className="text-lg"
                   >
-                    <Link href="/book-trial">Book Your Free Trial</Link>
+                    <Link href="/#book-trial">Book Your Free Trial</Link>
                   </Button>
 
                   <Button
@@ -37,7 +37,7 @@ export default function HeroSection() {
                     variant="outline"
                     className="border-2 text-lg"
                   >
-                    <Link href="/curriculum">Explore Curriculum</Link>
+                    <Link href="/#our-subjects">Explore Curriculum</Link>
                   </Button>
                 </div>
               </CardContent>

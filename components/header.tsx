@@ -1,15 +1,36 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import MobileMenu from "./header-mobile";
 import Image from "next/image";
+import { getCourseDataBySubjectId } from "@/lib/data/courses";
+import ClientHeader from "./client-header";
 
 const menuItems = [
   { href: "/about", label: "About Us" },
-  { href: "/mathematics", label: "Mathematics" },
-  { href: "/coding", label: "Coding" },
-  { href: "/english", label: "English" },
-  { href: "/science", label: "Science" },
-  { href: "/hindi", label: "Hindi" },
+  {
+    href: "/mathematics",
+    label: "Mathematics",
+    courses: getCourseDataBySubjectId("mathematics"),
+  },
+  {
+    href: "/coding",
+    label: "Coding",
+    courses: getCourseDataBySubjectId("coding"),
+  },
+  {
+    href: "/english",
+    label: "English",
+    courses: getCourseDataBySubjectId("english"),
+  },
+  {
+    href: "/science",
+    label: "Science",
+    courses: getCourseDataBySubjectId("science"),
+  },
+  {
+    href: "/hindi",
+    label: "Hindi",
+    courses: getCourseDataBySubjectId("hindi"),
+  },
   { href: "/short-courses", label: "Short Courses" },
 ];
 
@@ -29,26 +50,16 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-usq-blue-black hover:text-usq-cerulean"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <ClientHeader menuItems={menuItems} />
 
           <div className="bg-white text-black hidden lg:flex items-center space-x-4">
             <Button variant="outline" className="border-2">
               Contact Us
             </Button>
-            <Button variant="primary">Book Free Trial</Button>
+            <Link href="/#book-trial">
+              <Button variant="primary">Book Free Trial</Button>
+            </Link>
           </div>
-
-          <MobileMenu items={menuItems} />
         </div>
       </div>
     </header>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black py-12 md:py-16 px-6 ms-1 lg:ms-6">
+    <footer id="footer" className="bg-white text-black py-12 md:py-16 px-6 ms-1 lg:ms-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Quick Links */}
@@ -12,50 +12,42 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/subjects"
+                  href="/mathematics"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Subjects
+                  Mathematics
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/free-trial"
+                  href="/coding"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Free Trial
+                  Coding
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/english"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Contact
+                  English
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/support"
+                  href="/science"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Support
+                  Science
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/hindi"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faqs"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  FAQs
+                  Hindi
                 </Link>
               </li>
             </ul>
@@ -67,32 +59,40 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="https://facebook.com"
+                  href="https://facebook.com/unisqoool"
                   className="text-gray-600 hover:text-gray-900"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Facebook
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://instagram.com"
+                  href="https://instagram.com/unisqoool"
                   className="text-gray-600 hover:text-gray-900"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Instagram
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://x.com"
+                  href="https://www.linkedin.com/in/unisqoool"
                   className="text-gray-600 hover:text-gray-900"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  X
+                  LinkedIn
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://youtube.com"
+                  href="https://youtube.com/unisqool"
                   className="text-gray-600 hover:text-gray-900"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   YouTube
                 </Link>
@@ -141,10 +141,7 @@ export default function Footer() {
 
           {/* Company Info */}
           <div>
-            <Link
-              href="/"
-              className="flex justify-start w-30"
-            >
+            <Link href="/" className="flex justify-start w-30">
               <Image
                 src="/assets/logo.png"
                 alt="Logo"
@@ -156,10 +153,10 @@ export default function Footer() {
               <li className="text-gray-600">
                 Email:{" "}
                 <Link
-                  href="mailto:contact@unisqoool.com"
+                  href="mailto:unisqoool@gmail.com"
                   className="hover:text-gray-900"
                 >
-                  contact@unisqoool.com
+                  unisqoool@gmail.com
                 </Link>
               </li>
               <li className="text-gray-600">

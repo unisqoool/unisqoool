@@ -53,12 +53,9 @@ export default function Header() {
           <ClientHeader menuItems={menuItems} />
 
           <div className="bg-white text-black hidden lg:flex items-center space-x-4">
-            <Button variant="outline" className="border-2">
-              Contact Us
+            <Button asChild variant="primary">
+              <Link href="/#book-trial">Book Free Trial</Link>
             </Button>
-            <Link href="/#book-trial">
-              <Button variant="primary">Book Free Trial</Button>
-            </Link>
           </div>
         </div>
       </div>

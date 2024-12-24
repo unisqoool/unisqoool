@@ -83,7 +83,7 @@ export default function HowItWorks() {
 
         <div className="text-center">
           <Button asChild size="lg" variant="secondary" className="text-lg">
-            <Link href="/get-started">Get Started Now</Link>
+            <Link href="/#book-trial">Get Started Now</Link>
           </Button>
         </div>
       </div>

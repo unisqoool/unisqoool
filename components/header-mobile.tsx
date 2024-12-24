@@ -97,13 +97,6 @@ export default function MobileMenu({ items }: MobileMenuProps) {
             )
           )}
           <Button
-            variant="outline"
-            className="border-2 w-full"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact Us
-          </Button>
-          <Button
             asChild
             variant="primary"
             className="w-full"

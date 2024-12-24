@@ -30,18 +30,17 @@ export const coursesData: { [key: string]: CourseData } = {
     duration: "55 min",
     classType: "1:1 Classes",
     overview:
-      "Our Grade 1 Mathematics course lays the foundation for mathematical thinking. Through engaging activities and interactive lessons, students will develop a strong number sense, learn basic operations, and explore shapes and measurements.",
-    targetAudience: [
-      "Students aged 5-6 years",
-      "Children entering or in Grade 1",
-      "Young learners interested in building a strong math foundation",
-    ],
-    benefits: [
-      "Develop strong number sense and counting skills",
-      "Learn addition and subtraction with confidence",
-      "Explore shapes and basic geometry concepts",
-      "Build problem-solving and critical thinking skills",
-    ],
+    "This course covers key math concepts for first graders, including number recognition, basic addition and subtraction, shapes, time, and measurement. It focuses on developing problem-solving skills, building a strong mathematical foundation, and fostering a love for learning math.",
+  targetAudience: [
+    "First-grade students who are beginning to learn math concepts.",
+    "Children who need support in developing basic math skills and number fluency.",
+    "Parents and educators seeking a structured curriculum to help young learners succeed in math.",
+  ],
+  benefits: [
+    "It provides a solid foundation in math, ensuring readiness for more advanced concepts.",
+    "The course is designed to make learning engaging and accessible, encouraging confidence and success in math.",
+    "It includes hands-on activities and interactive lessons to help children understand and apply math concepts effectively.",
+  ],
     learningOutcomes: [
       "Count, read, and write numbers up to 100",
       "Perform basic addition and subtraction operations",
@@ -97,6 +96,19 @@ export const coursesData: { [key: string]: CourseData } = {
     ageRange: "6-7",
     duration: "55 min",
     features: ["Building Math Skills Every Day"],
+    overview:
+      "This course expands on foundational math skills, introducing more advanced concepts such as addition and subtraction with larger numbers, simple multiplication, telling time, and understanding money. Students will continue to develop problem-solving abilities and critical thinking skills.",
+    targetAudience: [
+      "Second-grade students who have mastered basic math concepts and are ready for more advanced learning.",
+      "Children who need extra practice with addition, subtraction, and early multiplication skills.",
+      "Parents and educators looking to build on students' math knowledge with a structured approach.",
+    ],
+    benefits: [
+      "It helps strengthen math fluency and introduces key concepts that are essential for future math success.",
+      "The course uses engaging, hands-on methods to make learning fun and interactive.",
+      "It ensures students are well-prepared for third-grade math and beyond, fostering a love for learning and confidence in math
+",
+    ],
   },
   math_grade_3: {
     id: "math_grade_3",
@@ -106,6 +118,18 @@ export const coursesData: { [key: string]: CourseData } = {
     ageRange: "7-8",
     duration: "55 min",
     features: ["Adding, Subtracting, and Exploring!"],
+    overview:
+   "This course builds on previous math skills, focusing on more complex addition, subtraction, multiplication, and division. It also introduces concepts like fractions, measurement, and data interpretation, helping students apply math to real-world problems.",
+ targetAudience: [
+   "Third-grade students who have a solid grasp of basic arithmetic and are ready to tackle more challenging concepts.",
+   "Children who need additional practice with multiplication, division, and understanding fractions.",
+   "Parents and educators aim to develop critical thinking and problem-solving skills in young learners.",
+ ],
+ benefits: [
+   "It strengthens students' math skills and prepares them for more advanced topics in higher grades.",
+   "The course incorporates practical applications, making math more relatable and engaging.",
+   "It encourages a deeper understanding of math, fostering both confidence and enthusiasm for learning.",
+ ],
   },
   math_grade_4: {
     id: "math_grade_4",
@@ -115,6 +139,18 @@ export const coursesData: { [key: string]: CourseData } = {
     ageRange: "8-9",
     duration: "55 min",
     features: ["Mastering Multiplication and Division"],
+    overview:
+   "This course focuses on expanding mathematical knowledge, including multi-digit multiplication, long division, fractions, decimals, and basic geometry concepts. Students will build problem-solving strategies and enhance their understanding of mathematical operations and relationships.",
+ targetAudience: [
+   "Fourth-grade students who have a basic understanding of arithmetic and are ready to explore more complex math concepts.",
+   "Children who need extra practice with multiplication, division, and working with fractions and decimals.",
+   "Parents and educators seek to support students in developing strong problem-solving and critical thinking skills.",
+ ],
+ benefits: [
+   "It provides a strong foundation in key math concepts, ensuring students are prepared for future academic challenges.",
+   "The course engages students with real-life applications and interactive exercises to make learning enjoyable.",
+   "It encourages logical thinking and helps students develop the skills needed to solve more complex math problems independently.",
+ ],
   },
   math_grade_5: {
     id: "math_grade_5",
@@ -124,6 +160,18 @@ export const coursesData: { [key: string]: CourseData } = {
     ageRange: "9-10",
     duration: "55 min",
     features: ["Exploring Fractions, Decimals, and More!"],
+    overview:
+   "This course deepens students' understanding of mathematics with topics like multi-digit multiplication and division, advanced fractions, decimals, percentages, geometry, and basic algebraic concepts. Students will refine their problem-solving skills and prepare for middle school math challenges.",
+ targetAudience: [
+   "Fifth-grade students who are ready to master more complex mathematical concepts and operations.",
+   "Children who need extra practice with fractions, decimals, and beginning algebra.",
+   "Parents and educators looking to solidify students' math skills and foster independent learning.",
+ ],
+ benefits: [
+   "It provides a comprehensive foundation for middle school math, ensuring long-term academic success.",
+   "The course offers practical, real-world examples to make abstract concepts more relatable and easier to grasp.",
+   "It helps build confidence and critical thinking skills, making students more comfortable with challenging math topics.",
+ ],
   },
   math_grade_6: {
     id: "math_grade_6",
@@ -133,6 +181,18 @@ export const coursesData: { [key: string]: CourseData } = {
     ageRange: "10-11",
     duration: "55 min",
     features: ["Exploring Algebra and Geometry"],
+    overview:
+   "This course introduces more advanced mathematical concepts, including ratios, proportions, integers, fractions, decimals, percentages, and basic algebra. Students will strengthen their problem-solving skills and develop a deeper understanding of mathematical reasoning to prepare for middle school and beyond.",
+ targetAudience: [
+   "Sixth-grade students who have a solid foundation in basic arithmetic and are ready to tackle more complex math topics.",
+   "Children who need additional support with fractions, decimals, and basic algebraic concepts.",
+   "Parents and educators seek to build strong math skills and foster a deeper understanding of mathematical concepts.",
+ ],
+ benefits: [
+   "It prepares students for higher-level math courses by introducing foundational concepts that are critical for success in future grades.",
+   "The course offers interactive lessons and practical examples, making challenging concepts more accessible and engaging.",
+   "It helps students develop critical thinking and analytical skills, ensuring they are well-equipped for middle school math and beyond.",
+ ],
   },
   math_sat: {
     id: "math_sat",
@@ -212,6 +272,18 @@ export const coursesData: { [key: string]: CourseData } = {
       "Simple game development",
       "Logic building",
     ],
+    overview:
+   "This course introduces the fundamentals of coding, teaching beginners how to write basic programs using beginner-friendly programming languages. Students will learn essential concepts like variables, loops, and conditionals, providing a strong foundation for future coding endeavors.",
+ targetAudience: [
+   "Individuals with no prior coding experience who want to get started in programming.",
+   "Students or adults interested in learning how to create simple applications and understand the basics of computer science.",
+   "Parents and educators looking to introduce coding in an easy and engaging way.",
+ ],
+ benefits: [
+   "It provides a structured and accessible introduction to coding, making complex concepts easier to grasp.",
+   "The course uses hands-on projects and interactive exercises to help learners build practical coding skills.",
+   "It lays a solid foundation for more advanced programming courses and tech-related careers in the future.",
+ ],
   },
   coding_intermediate: {
     id: "coding_intermediate",
@@ -224,6 +296,18 @@ export const coursesData: { [key: string]: CourseData } = {
       "Web development fundamentals",
       "Simple app creation",
     ],
+    overview:
+   "This course builds on foundational coding knowledge, introducing more advanced concepts like object-oriented programming, data structures, and algorithms. Students will work on creating more complex projects, enhancing their coding skills and problem-solving abilities.",
+ targetAudience: [
+   "Individuals who have basic coding knowledge and want to expand their skills and tackle more complex programming challenges.",
+   "Students or professionals looking to gain a deeper understanding of coding concepts and improve their problem-solving techniques.",
+   "Parents and educators seeking to support learners in progressing from beginner to intermediate coding skills.",
+ ],
+ benefits: [
+   "It strengthens students' understanding of core coding concepts, preparing them for advanced programming or real-world applications.",
+   "The course offers hands-on projects that develop both coding and critical thinking skills.",
+   "It equips learners with the tools to create more dynamic and functional applications, laying the groundwork for future tech careers.",
+ ],
   },
   coding_advance: {
     id: "coding_advance",
@@ -232,6 +316,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "special",
     ageRange: "15-18",
     features: ["Data structures", "Algorithms", "Full-stack development"],
+    overview:
+   "This course dives into complex programming topics like advanced algorithms, system design, databases, and software development. Students will work on large-scale projects, honing their coding expertise and preparing for real-world software development challenges.",
+ targetAudience: [
+   "Experienced coders looking to deepen their understanding of advanced concepts and refine their programming skills.",
+   "Individuals interested in pursuing careers in software engineering, app development, or data science.",
+   "Professionals or students who want to master advanced techniques for solving complex problems in coding.",
+ ],
+ benefits: [
+   "It provides comprehensive, in-depth knowledge that prepares learners for high-level coding tasks and real-world tech roles.",
+   "The course emphasizes practical applications, ensuring students can build complex, scalable projects.",
+   "It strengthens problem-solving skills and technical expertise, making students competitive in the tech industry.",
+ ],
   },
   coding_professional: {
     id: "coding_professional",
@@ -240,6 +336,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "special",
     ageRange: "18+",
     features: ["Advanced frameworks", "Version control", "Agile methodologies"],
+    overview:
+   "This advanced course is designed for those aiming to become professional software developers, covering topics like full-stack development, cloud computing, machine learning, and DevOps. Students will work on building industry-standard applications and gaining real-world experience in the tech field.",
+ targetAudience: [
+   "Experienced developers or coding professionals seeking to specialize in high-demand areas like full-stack development or machine learning.",
+   "Individuals preparing for career advancement in software engineering, data science, or IT management.",
+   "Professionals looking to build expertise in cutting-edge technologies and industry best practices.",
+ ],
+ benefits: [
+   "It offers in-depth knowledge of advanced technologies and practical experience in building professional-grade applications.",
+   "The course is tailored to industry standards, ensuring students gain skills directly applicable to high-level tech careers.",
+   "It provides career-focused training, equipping learners with the expertise needed to excel in competitive coding roles and leadership positions.",
+ ],
   },
 
   // English Courses
@@ -250,6 +358,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "5-6",
     duration: "45 min",
+    overview:
+   "This course focuses on building essential literacy skills, including phonics, vocabulary, reading comprehension, and basic writing. Students will develop a love for reading and writing through interactive lessons, helping them gain confidence in expressing themselves.",
+ targetAudience: [
+   "First-grade students who are beginning to learn reading and writing or need additional support in these areas.",
+   "Children who are ready to improve their phonics, vocabulary, and basic sentence structure.",
+   "Parents and educators looking to create a strong literacy foundation for young learners.",
+ ],
+ benefits: [
+   "It helps students build essential reading and writing skills that will support future academic success.",
+   "The course uses engaging and age-appropriate activities to make learning fun and interactive.",
+   "It encourages creativity and self-expression, helping students develop confidence in their language abilities.",
+ ],
   },
   english_grade_2: {
     id: "english_grade_2",
@@ -258,6 +378,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "6-7",
     duration: "45 min",
+    overview:
+   "This course strengthens foundational literacy skills, focusing on reading fluency, vocabulary expansion, sentence structure, and basic writing. Students will engage in fun activities to enhance comprehension and writing, preparing them for more advanced language skills.",
+ targetAudience: [
+   "Second-grade students who are developing reading and writing skills and are ready to build more confidence.",
+   "Children who need extra practice with fluency, vocabulary, and constructing complete sentences.",
+   "Parents and educators looking to foster literacy development and creativity in young learners.",
+ ],
+ benefits: [
+   "It helps reinforce and expand essential literacy skills, laying the groundwork for future language success.",
+   "The course provides engaging, hands-on activities that make learning fun and promote active participation.",
+   "It builds reading comprehension and writing skills, helping students express themselves clearly and confidently.",
+ ],
   },
   english_grade_3: {
     id: "english_grade_3",
@@ -266,6 +398,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "7-8",
     duration: "45 min",
+    overview:
+   "This course focuses on enhancing reading comprehension, vocabulary development, sentence structure, and creative writing. Students will explore different types of texts, practice summarizing, and develop the skills to write clearly and coherently.",
+ targetAudience: [
+   "Third-grade students who are ready to strengthen their reading and writing abilities.",
+   "Children who need additional practice with comprehension, vocabulary, and constructing more complex sentences.",
+   "Parents and educators seeking to improve students' critical thinking and written expression skills.",
+ ],
+ benefits: [
+   "It deepens students' understanding of language and strengthens essential literacy skills needed for academic success.",
+   "The course incorporates a variety of engaging texts and activities to keep learning interactive and fun.",
+   "It builds strong reading and writing habits, preparing students for more advanced language arts concepts in later grades.",
+ ],
   },
   english_grade_4: {
     id: "english_grade_4",
@@ -274,6 +418,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "8-9",
     duration: "45 min",
+    overview:
+   "This course focuses on enhancing reading comprehension, expanding vocabulary, and improving writing skills. Students will explore different genres of literature, develop paragraph writing techniques, and work on grammar to strengthen their overall language skills.",
+ targetAudience: [
+   "Fourth-grade students who are ready to tackle more complex texts and improve their writing skills.",
+   "Children who need support with grammar, sentence structure, and organizing their thoughts in writing.",
+   "Parents and educators looking to develop critical reading and writing skills for academic growth.",
+ ],
+ benefits: [
+   "It strengthens reading and writing abilities, preparing students for higher-level language arts tasks.",
+   "The course engages students with diverse reading materials and activities to foster a deeper understanding of language.",
+   "It builds confidence in writing and comprehension, ensuring students are ready for future English challenges.",
+ ],
   },
   english_grade_5: {
     id: "english_grade_5",
@@ -282,6 +438,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "9-10",
     duration: "45 min",
+    overview:
+   "This course focuses on refining reading comprehension, advanced vocabulary, and writing skills. Students will work on analyzing different types of texts, writing essays, and mastering grammar and punctuation, building strong language foundations for middle school.",
+ targetAudience: [
+   "Fifth-grade students who are ready to enhance their reading, writing, and critical thinking skills.",
+   "Children who need additional practice with essay writing, grammar, and understanding complex texts.",
+   "Parents and educators looking to prepare students for the demands of middle school English.",
+ ],
+ benefits: [
+   "It develops essential writing and analytical skills needed for success in higher grades.",
+   "The course offers engaging, real-world applications of language skills to foster deeper learning.",
+   "It builds confidence in reading and writing, helping students communicate effectively in both academic and everyday contexts.",
+ ],
   },
   english_grade_6: {
     id: "english_grade_6",
@@ -290,6 +458,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "grade",
     ageRange: "10-11",
     duration: "45 min",
+    overview:
+   "This course focuses on advanced reading comprehension, writing skills, and critical analysis of various texts. Students will work on crafting essays, exploring literary elements, and improving grammar, punctuation, and vocabulary to prepare for more complex middle school English.",
+ targetAudience: [
+   "Sixth-grade students who are ready to deepen their reading, writing, and analytical skills.",
+   "Children who need support with understanding complex texts and developing strong writing techniques.",
+   "Parents and educators are looking to build a strong foundation for students as they transition into middle school English.",
+ ],
+ benefits: [
+   "It enhances students' ability to analyse and interpret various texts, fostering critical thinking skills.",
+   "The course provides structured practice in writing and grammar, ensuring students are well-prepared for middle school.",
+   "It engages students with challenging materials and activities, promoting a deeper love for reading and writing.",
+ ],
   },
   english_sat: {
     id: "english_sat",

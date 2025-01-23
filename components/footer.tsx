@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-white text-black py-12 md:py-16 px-6 ms-1 lg:ms-6">
+    <footer
+      id="footer"
+      className="bg-white text-black py-12 md:py-16 px-6 ms-1 lg:ms-6"
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Quick Links */}
@@ -114,26 +117,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms-of-service"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/refund-policy"
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Refund Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/data-policy"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Data Policy
                 </Link>
               </li>
             </ul>

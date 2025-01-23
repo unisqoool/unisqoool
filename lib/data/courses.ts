@@ -12,7 +12,7 @@ export interface CourseData {
   ageRange?: string;
   duration?: string;
   classType?: string;
-  overview?: string;
+  overview: string;
   targetAudience?: string[];
   benefits?: string[];
   learningOutcomes?: string[];
@@ -210,25 +210,13 @@ export const coursesData: { [key: string]: CourseData } = {
     duration: "55 min",
     classType: "Small Group Classes",
     overview:
-      "Our SAT Mathematics Preparation course is designed to equip students with the knowledge, strategies, and confidence needed to excel in the math section of the SAT. Through rigorous practice and targeted instruction, students will master key concepts and test-taking techniques.",
-    targetAudience: [
-      "High school students planning to take the SAT",
-      "Students aiming to improve their SAT math scores",
-      "Learners seeking to strengthen their overall math skills",
-    ],
-    benefits: [
-      "Comprehensive coverage of all SAT math topics",
-      "Strategies for tackling different question types",
-      "Timed practice to improve speed and accuracy",
-      "Personalized feedback and progress tracking",
-    ],
+      "This course focuses on preparing students for the SAT Math section by covering essential topics such as algebra, problem-solving, data analysis, geometry, and advanced mathematics. Students will learn to apply mathematical concepts to solve real-world problems, improve their problem-solving speed, and strengthen their test-taking strategies. The course includes targeted practice sessions, drills, and timed mock tests to build confidence and accuracy. Students will receive personalized feedback to help identify areas for improvement. By the end of the course, learners will be well-equipped with the skills and strategies needed to perform confidently and effectively on the SAT Math section",
     learningOutcomes: [
-      "Master algebra, geometry, and trigonometry concepts tested on the SAT",
-      "Develop effective problem-solving strategies for SAT-style questions",
-      "Improve time management skills for the math section",
-      "Gain confidence in tackling challenging math problems",
+      "Master Core Math Concepts: Develop proficiency in key areas such as algebra, geometry, trigonometry, and data analysis, with a focus on problem-solving and application of mathematical principles.",
+      "Enhance Problem-Solving Skills: Build strategies for tackling complex word problems, translating real-world scenarios into mathematical expressions, and using logical reasoning to arrive at solutions.",
+      "Strengthen Arithmetic and Algebraic Skills: Improve operations with rational and irrational numbers, equations, inequalities, functions, and expressions to handle both basic and advanced algebraic problems.",
+      "Data Analysis and Interpretation: Gain the ability to interpret and analyze data from graphs, tables, and charts, and apply statistical concepts to solve problems related to probability, mean, median, and standard deviation.",
     ],
-    features: ["Ace Your SAT Math with Confidence"],
   },
   math_naplan: {
     id: "math_naplan",
@@ -238,7 +226,14 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "competitive",
     ageRange: "6+",
     duration: "55 min",
-    features: ["Aligned with Australian Curriculum"],
+    overview:
+      "This course is designed to help students prepare for the Math section of the NAPLAN test, focusing on key topics such as number operations, algebra, geometry, measurement, and data analysis. Through a series of practice questions and interactive lessons, students will develop their problem-solving and critical thinking skills. The course emphasizes understanding mathematical concepts and applying them to real-life scenarios. Regular mock tests and personalized feedback will help track progress and improve test-taking strategies. By the end of the course, students will feel confident in their ability to approach the NAPLAN Math test with accuracy and efficiency.",
+    learningOutcomes: [
+      "Number and Operations: Develop strong foundational skills in arithmetic, including operations with whole numbers, fractions, decimals, and percentages, ensuring fluency in basic calculations and problem-solving.",
+      "Algebra and Patterns: Strengthen understanding of algebraic concepts, including solving equations, recognizing patterns, and working with variables and expressions to build problem-solving strategies.",
+      "Geometry and Measurement: Improve knowledge of geometric shapes, spatial reasoning, area, volume, and the use of measurement tools to solve practical problems related to length, angles, and 2D/3D shapes.",
+      "Data and Probability: Enhance skills in interpreting and analyzing data, including the ability to work with graphs, tables, and statistics, and to understand basic concepts of probability and outcomes.",
+    ],
   },
   math_imo: {
     id: "math_imo",
@@ -248,7 +243,14 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "competitive",
     ageRange: "12+",
     duration: "55 min",
-    features: ["The Path to Math Olympiad Excellence"],
+    overview:
+      "This course is designed to prepare students for the International Mathematics Olympiad (IMO), focusing on advanced problem-solving techniques and mathematical concepts. Students will delve into topics such as algebra, number theory, combinatorics, geometry, and mathematical logic. The course emphasizes developing critical thinking, analytical skills, and the ability to tackle complex problems through creative solutions. With challenging exercises, mock tests, and personalized feedback, students will enhance their mathematical abilities and build confidence in approaching competitive exams. This comprehensive preparation ensures students are well-equipped to excel in the IMO and other math competitions.",
+    learningOutcomes: [
+      "Advanced Problem-Solving Techniques: Develop expertise in solving complex and abstract mathematical problems using creative strategies, mathematical reasoning, and a variety of methods such as induction, contradiction, and combinatorics.",
+      "Deep Understanding of Mathematical Concepts: Build a solid grasp of advanced topics such as number theory, algebra, geometry, combinatorics, and mathematical logic, and apply them in various problem-solving contexts.",
+      "Critical Thinking and Proof Techniques: Strengthen skills in constructing rigorous mathematical proofs, including direct proofs, proof by induction, and proof by contradiction, ensuring clarity and logical consistency in solutions.",
+      "Mathematical Competition Strategies: Enhance speed and accuracy in solving problems under timed conditions, practicing problem-solving in the format of the IMO, and building resilience in approaching difficult and unfamiliar mathematical challenges.",
+    ],
   },
   math_abacus: {
     id: "math_abacus",
@@ -258,16 +260,18 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "special",
     ageRange: "8+",
     duration: "55 min",
+    overview: "Coming soon...",
     features: ["Mastering Math the Abacus Way"],
   },
   math_vedic: {
     id: "math_vedic",
     subjectId: "mathematics",
-    title: "Vedic Mathematics",
+    title: "Vedic",
     description: "Ancient Indian system of mental arithmetic",
     type: "special",
     ageRange: "10+",
     duration: "55 min",
+    overview: "Coming soon...",
     features: ["Math Made Easy with Ancient Vedic Methods"],
   },
 
@@ -498,7 +502,14 @@ export const coursesData: { [key: string]: CourseData } = {
     title: "SAT",
     description: "Comprehensive SAT English and Writing preparation",
     type: "competitive",
-    features: ["Critical reading", "Essay writing", "Grammar and usage"],
+    overview:
+      "This course is designed to help students master the English skills required for the SAT, focusing on reading comprehension, writing, and language usage. Students will explore various reading passages, including literature, history, and science, and learn to analyse and interpret texts effectively. The course also covers grammar, sentence structure, and rhetorical skills, with a strong emphasis on improving writing clarity and coherence. Through targeted practice and strategies, students will build the skills necessary to excel in the SAT English section, boosting their confidence and performance on test day. Personalized feedback and mock tests are included to track progress and refine skills.",
+    learningOutcomes: [
+      "Master Reading Comprehension: Develop skills to analyze and interpret complex texts, identifying main ideas, themes, and supporting details in a variety of genres, including literature, historical documents, and science-related passages.",
+      "Improve Grammar and Syntax: Strengthen knowledge of standard English conventions, focusing on punctuation, sentence structure, verb tense, subject-verb agreement, and effective use of transitions to improve clarity and coherence in writing.",
+      "Critical Writing Skills: Enhance the ability to craft well-organized, clear, and persuasive essays with a focus on logical argumentation, evidence support, and strong writing mechanics in response to given prompts.",
+      "Expand Vocabulary: Increase understanding and effective use of high-frequency academic vocabulary, with a focus on context clues and word relationships to improve reading and writing performance on the SAT.",
+    ],
   },
   english_naplan: {
     id: "english_naplan",
@@ -506,10 +517,13 @@ export const coursesData: { [key: string]: CourseData } = {
     title: "NAPLAN",
     description: "Preparation for NAPLAN literacy assessments",
     type: "competitive",
-    features: [
-      "Reading comprehension",
-      "Writing tasks",
-      "Language conventions",
+    overview:
+      "This course is designed to prepare students for the English component of the NAPLAN test, focusing on key areas such as reading comprehension, writing, grammar, and language conventions. Students will engage with various text types, including narratives, persuasive essays, and informational texts, while developing their ability to analyse and respond critically. The course emphasizes improving spelling, punctuation, and sentence structure to ensure clarity and coherence in writing. Through targeted practice exercises, students will build confidence in their ability to tackle NAPLAN's diverse English tasks. Regular assessments and personalized feedback will help track progress and refine skills for optimal performance on test day.",
+    learningOutcomes: [
+      "Reading Comprehension Skills: Develop the ability to understand and analyze various text types, including narrative, persuasive, and informative texts, by identifying key ideas, themes, and supporting details.",
+      "Writing Proficiency: Strengthen skills in constructing well-organized written responses, including persuasive and narrative essays, focusing on clear expression, logical structure, and appropriate tone.",
+      "Grammar and Language Conventions: Enhance knowledge of grammar, punctuation, spelling, and sentence structure to ensure accuracy and clarity in both written and oral communication.",
+      "Vocabulary and Word Usage: Improve vocabulary and the ability to use context to infer meanings, enabling more effective communication and better performance in reading and writing tasks.",
     ],
   },
   english_ieo: {
@@ -518,10 +532,13 @@ export const coursesData: { [key: string]: CourseData } = {
     title: "IEO",
     description: "Advanced English skills for olympiad competitions",
     type: "competitive",
-    features: [
-      "Vocabulary enhancement",
-      "Advanced grammar",
-      "Analytical reading",
+    overview:
+      "This course is designed to help students prepare for the International English Olympiad (IEO), focusing on enhancing their English proficiency in areas such as reading comprehension, grammar, vocabulary, and writing. Students will work through a variety of exercises that improve their ability to analyze texts, identify errors, and strengthen their overall language skills. The course also covers the development of critical thinking and language application through creative writing and short-answer questions. With regular practice tests and personalized feedback, students will gain confidence and sharpen their problem-solving abilities for the IEO. This comprehensive preparation ensures that students are well-equipped to excel in the exam.",
+    learningOutcomes: [
+      "Reading and Comprehension: Develop the ability to critically analyze diverse texts, identifying main ideas, inferences, and underlying themes, and understanding the nuances of both literary and non-literary passages.",
+      "Vocabulary and Language Skills: Enhance vocabulary usage through exposure to a variety of word types, idiomatic expressions, and context-based word meaning, improving both reading comprehension and written communication.",
+      "Grammar and Language Conventions: Strengthen knowledge of English grammar, including sentence structure, punctuation, and usage, to ensure correct application in both written and spoken forms.",
+      "Effective Writing: Build the ability to produce clear, coherent, and logically structured essays and responses across various genres, demonstrating creativity, critical thinking, and adherence to writing conventions.",
     ],
   },
 

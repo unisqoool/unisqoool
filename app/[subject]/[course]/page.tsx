@@ -47,8 +47,8 @@ export default function Course() {
       />
 
       {/* Hero Section */}
-      <div className="bg-usq-faded-peach py-12 ps-8">
-        <div className="container mx-auto px-4 text-center lg:text-start lg:px-0">
+      <div className="bg-usq-faded-peach py-12 md:ps-8">
+        <div className="container mx-auto md:px-4 text-center lg:text-start lg:px-0">
           <h1 className="text-5xl lg:text-6xl text-usq-red font-bold mb-6 font-podkova">
             {`${courseTitle} ${subjectTitle}`}
           </h1>
@@ -88,39 +88,44 @@ export default function Course() {
 
         {/* Info Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="border py-4 rounded-lg bg-usq-sky/40">
-            <CardContent className="p-6">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-usq-teal">
-                <UsersRound className="inline-block mr-2 font-normal size-8 " />
-                Who This Course is For
-              </h3>
-              <ul className="space-y-2">
-                {courseData.targetAudience?.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="mr-2">›</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          {courseData.targetAudience &&
+            courseData.targetAudience.length > 0 && (
+              <Card className="border py-4 rounded-lg bg-usq-sky/40">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-usq-teal">
+                    <UsersRound className="inline-block mr-2 font-normal size-8 " />
+                    Who This Course is For
+                  </h3>
+                  <ul className="space-y-2">
+                    {courseData.targetAudience?.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="mr-2">›</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            )}
 
-          <Card className="border py-4 rounded-lg bg-usq-sky/40">
-            <CardContent className="p-6">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-usq-teal">
-                <Shapes className="inline-block mr-2 font-normal size-8" />
-                Why Choose This Course
-              </h3>
-              <ul className="space-y-2">
-                {courseData.benefits?.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="mr-2">›</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          {courseData.benefits && courseData.benefits.length > 0 && (
+            <Card className="border py-4 rounded-lg bg-usq-sky/40">
+              <CardContent className="p-6">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-usq-teal">
+                  <Shapes className="inline-block mr-2 font-normal size-8" />
+                  Why Choose This Course
+                </h3>
+                <ul className="space-y-2">
+                  {courseData.benefits?.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-2">›</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
         </div>
 
         {/* Learning Outcomes */}

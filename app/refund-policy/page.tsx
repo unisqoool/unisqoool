@@ -247,12 +247,12 @@ export default function RefundPolicy() {
           <h2 className="text-2xl text-start font-bold mt-8 mb-4 font-nunito text-usq-red">
             One-time Payment:
           </h2>
-          <h3 className="text-xl font-bold mt-6 mb-2">Fulfilment:</h3>
+          <h3 className="text-xl font-bold mt-6 mb-2 text-usq-cerulean">Fulfilment:</h3>
           <p className="mb-4">
             As soon as the customer purchases the plan, fulfilment happens
             online and #classes/credits are allotted immediately.
           </p>
-          <h3 className="text-xl font-bold mt-6 mb-2 text-usq-blue-black">Refund Policy:</h3>
+          <h3 className="text-xl font-bold mt-6 mb-2 text-usq-cerulean">Refund Policy:</h3>
           <p className="mb-4">
             The amount of refund payable shall only be limited to the amount
             paid by the customer for services which were not rendered to the
@@ -280,7 +280,7 @@ export default function RefundPolicy() {
               info@unisqoool.com
             </a>
           </p>
-          <h3 className="text-xl font-bold mt-6 mb-2 text-usq-blue-black">Refund Process:</h3>
+          <h3 className="text-xl font-bold mt-6 mb-2 text-usq-cerulean">Refund Process:</h3>
           <p className="mb-4">
             We aim to process and refund requests within 30 business days of
             receiving the request. If request is made as per our refund policy

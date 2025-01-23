@@ -16,7 +16,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/mathematics"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Mathematics
                 </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/coding"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Coding
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/english"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   English
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/science"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Science
                 </Link>
@@ -48,9 +48,17 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hindi"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Hindi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/short-courses"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
+                >
+                  Short Courses
                 </Link>
               </li>
             </ul>
@@ -62,18 +70,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="https://facebook.com/unisqoool"
-                  className="text-gray-600 hover:text-gray-900"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Facebook
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="https://instagram.com/unisqoool"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -83,7 +81,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://www.linkedin.com/in/unisqoool"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -92,12 +90,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://youtube.com/unisqool"
-                  className="text-gray-600 hover:text-gray-900"
+                  href="https://x.com/unisqoool"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  YouTube
+                  X (Twitter)
                 </Link>
               </li>
             </ul>
@@ -110,7 +108,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Privacy Policy
                 </Link>
@@ -118,7 +116,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/refund-policy"
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
                   Refund Policy
                 </Link>
@@ -140,18 +138,18 @@ export default function Footer() {
               <li className="text-gray-600">
                 Email:{" "}
                 <Link
-                  href="mailto:unisqoool@gmail.com"
-                  className="hover:text-gray-900"
+                  href="mailto:info@unisqoool.com"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
                 >
-                  unisqoool@gmail.com
+                  info@unisqoool.com
                 </Link>
               </li>
-              <li className="text-gray-600">
+              {/* <li className="text-gray-600">
                 Phone:{" "}
                 <Link href="tel:+919876543210" className="hover:text-gray-900">
                   +91 98765 43210
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -212,7 +212,7 @@ export default function AboutUs() {
               <div className="md:w-1/3 flex justify-center">
                 <div className="w-48 h-48 rounded-full border-2 border-usq-cerulean overflow-hidden">
                   <Image
-                    src="/assets/avatars/shanku.jpeg"
+                    src="/assets/avatars/shanku.png"
                     alt="Shanku Vashisht"
                     width={192}
                     height={192}

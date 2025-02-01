@@ -122,7 +122,7 @@ export default function TestimonialCarousel({
                       src={testimonial.image}
                       alt={testimonial.name}
                       fill
-                      className="object-cover rounded-full"
+                      className="object-cover rounded-full border border-usq-cerulean"
                     />
                   </div>
                   <div className="text-center">

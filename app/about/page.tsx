@@ -153,24 +153,27 @@ export default function AboutUs() {
                   Upasna Chatterjee
                 </h3>
                 <p className="text-usq-blue-black/70 text-justify">
-                  Meet Upasna Chatterjee, a Delhi native with a golden pen (her
-                  parents are the true masterminds behind that, not some fancy
-                  silver spoon)! Armed with double masters in Political Science
-                  and Social Work, plus a shiny certification from the British
-                  Council in English, she’s here to prove that education can be
-                  as fun as a dance party and not as scary as a pop quiz.
-                  English? Pfft, it’s just a language, not rocket science
-                  (unless you&apos;re reading Shakespeare, then maybe it&apos;s
-                  rocket science). With 10 years of teaching experience, an SAT
-                  trainer gig, and a second job as a part-time counselor
-                  (because, you know, kids need guidance... and sometimes
-                  chocolate), Upasna also claims to be an animal lover,
-                  state-level badminton and volleyball player, and a total
-                  foodie. Her motto? Learning isn’t just about books—it’s about
-                  growing, giggling, and maybe grabbing a snack along the way.
-                  As a co-founder of <strong>Unisqool</strong>, she’s on a
-                  mission to make learning so fun, even your pet might want to
-                  join in (and yes, your dog can totally ace the math test)!
+                  <p>
+                    Meet Upasna Chatterjee, a Delhi native with a golden pen
+                    (her parents are the true masterminds behind that, not some
+                    fancy silver spoon)! Armed with double masters in Political
+                    Science and Social Work, plus a shiny certification from the
+                    British Council in English, she&rsquo;s here to prove that
+                    education can be as fun as a dance party and not as scary as
+                    a pop quiz. English? Pfft, it&rsquo;s just a language, not
+                    rocket science (unless you&apos;re reading Shakespeare, then
+                    maybe it&apos;s rocket science). With 10 years of teaching
+                    experience, a SAT trainer gig, and a second job as a
+                    part-time counselor (because, you know, kids need
+                    guidance... and sometimes chocolate), Upasna also claims to
+                    be an animal lover, state-level badminton and volleyball
+                    player, and a total foodie. Her motto? Learning isn&rsquo;t
+                    just about books&mdash;it&rsquo;s about growing, giggling,
+                    and maybe grabbing a snack along the way. As a co-founder of{" "}
+                    <strong>Unisqoool</strong>, she&rsquo;s on a mission to make
+                    learning so fun, even your pet might want to join in (and
+                    yes, your dog can totally ace the English test)!
+                  </p>
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center">

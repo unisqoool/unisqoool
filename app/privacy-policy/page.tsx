@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
             Unisqoool values your trust. In order to honour that trust,
             Unisqoool adheres to ethical standards in gathering, using, and
             safeguarding any information you provide. &quot;DUS EDVENTURE TECH
-            &quot; (operating under the brand name Unisqoool), is a leading
+            &quot; (operating under the trade name Unisqoool), is a leading
             edtech company, incorporated in India, offering various educational,
             vocational and recreational courses to individuals and
             organizations. For the sake of brevity of understanding this Privacy
@@ -25,7 +25,8 @@ export default function PrivacyPolicy() {
             &quot;.
           </p>
           <p className="mb-4">
-            This privacy policy governs your use of the www.unisqoool .com
+            This privacy policy governs your use of the{" "}
+            <strong>www.unisqoool.com</strong>
             (&quot;Website&quot;) and the other associated/ancillary
             applications, products, websites and services managed by the
             Company, &quot;DUS EDVENTURE TECH&quot;. Please read this privacy

@@ -220,7 +220,7 @@ export default function RefundPolicy() {
             <br />
             Math- Four (4) classes per month
             <br />
-            Music- Four (4) classes per month
+            English- Four (4) classes per month
           </p>
           <ol start={4} className="list-decimal pl-6 mb-4">
             <li className="mb-2">

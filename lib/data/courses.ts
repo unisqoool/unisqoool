@@ -43,51 +43,6 @@ export const coursesData: { [key: string]: CourseData } = {
       "The course is designed to make learning engaging and accessible, encouraging confidence and success in math.",
       "It includes hands-on activities and interactive lessons to help children understand and apply math concepts effectively.",
     ],
-    learningOutcomes: [
-      "Count, read, and write numbers up to 100",
-      "Perform basic addition and subtraction operations",
-      "Recognize and describe basic 2D and 3D shapes",
-      "Understand and use simple measurement concepts",
-    ],
-    modules: [
-      {
-        title: "Module 1",
-        contents: [
-          "Introduction to key concepts",
-          "Basic principles and foundations",
-          "Practice exercises and applications",
-          "Assessment and review",
-        ],
-      },
-      {
-        title: "Module 2",
-        contents: [
-          "Introduction to key concepts",
-          "Basic principles and foundations",
-          "Practice exercises and applications",
-          "Assessment and review",
-        ],
-      },
-      {
-        title: "Module 3",
-        contents: [
-          "Introduction to key concepts",
-          "Basic principles and foundations",
-          "Practice exercises and applications",
-          "Assessment and review",
-        ],
-      },
-      {
-        title: "Module 4",
-        contents: [
-          "Introduction to key concepts",
-          "Basic principles and foundations",
-          "Practice exercises and applications",
-          "Assessment and review",
-        ],
-      },
-      // ... other modules
-    ],
     features: ["Counting, Adding, and More!"],
   },
   math_grade_2: {
@@ -208,7 +163,6 @@ export const coursesData: { [key: string]: CourseData } = {
     type: "competitive",
     ageRange: "12+",
     duration: "55 min",
-    classType: "Small Group Classes",
     overview:
       "This course focuses on preparing students for the SAT Math section by covering essential topics such as algebra, problem-solving, data analysis, geometry, and advanced mathematics. Students will learn to apply mathematical concepts to solve real-world problems, improve their problem-solving speed, and strengthen their test-taking strategies. The course includes targeted practice sessions, drills, and timed mock tests to build confidence and accuracy. Students will receive personalized feedback to help identify areas for improvement. By the end of the course, learners will be well-equipped with the skills and strategies needed to perform confidently and effectively on the SAT Math section",
     learningOutcomes: [

@@ -193,7 +193,7 @@ export default function AboutUs() {
             <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-8 mb-12">
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold text-usq-cerulean text-center lg:text-start mb-4">
-                  Shanku Vashisht
+                  Shanku Vashist
                 </h3>
                 <p className="text-usq-blue-black/70 text-justify">
                   <strong>Unisqool</strong> is on a mission to make learning not
@@ -205,7 +205,7 @@ export default function AboutUs() {
                   secret? Clearing confusion, smashing homework like it&apos;s a
                   piñata, and banishing exam stress faster than you can say
                   &quot;A+!&quot; With a degree in Electronics (Honors) from
-                  Delhi University and a post-grad in Finance, Shanku Vashisht
+                  Delhi University and a post-grad in Finance, Shanku Vashist
                   combines brains with tech wizardry to make learning feel like
                   a fun game of Monopoly—minus the jail time. At Unisqool, her
                   goal is simple: make education so fun, students will be
@@ -216,7 +216,7 @@ export default function AboutUs() {
                 <div className="w-48 h-48 rounded-full border-2 border-usq-cerulean overflow-hidden">
                   <Image
                     src="/assets/avatars/shanku.png"
-                    alt="Shanku Vashisht"
+                    alt="Shanku Vashist"
                     width={192}
                     height={192}
                     className="object-cover w-full h-full"

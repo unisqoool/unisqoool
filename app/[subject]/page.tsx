@@ -93,7 +93,7 @@ export default function Subject() {
         {/* Book Trial Button */}
         <div className="mb-12">
           <Button asChild variant="primary" size="lg">
-            <Link href="/book-trial">Book Your Free Trial</Link>
+            <Link href={`#book-trial-${subject}`}>Book Your Free Trial</Link>
           </Button>
         </div>
 
@@ -174,6 +174,7 @@ export default function Subject() {
             </section>
           )}
 
+        <span id={`book-trial-${subject}`}></span>
         <BookTrialSection subject={subjectId} />
       </div>
     </div>

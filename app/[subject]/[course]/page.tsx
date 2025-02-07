@@ -81,9 +81,10 @@ export default function Course() {
           <h2 className="text-4xl font-bold mb-2 font-nunito">
             Course Overview
           </h2>
-          <p className="text-usq-blue-black/80 lg:text-xl">
-            {courseData.overview}
-          </p>
+          <div
+            className="text-usq-blue-black/80 lg:text-xl"
+            dangerouslySetInnerHTML={{ __html: courseData.overview }}
+          />
         </section>
 
         {/* Info Cards */}

@@ -322,6 +322,89 @@ export const coursesData: { [key: string]: CourseData } = {
       "It provides career-focused training, equipping learners with the expertise needed to excel in competitive coding roles and leadership positions.",
     ],
   },
+  coding_scratch: {
+    id: "coding_scratch",
+    subjectId: "coding",
+    title: "Scratch",
+    description:
+      "Unleash Your Creativity: Dive into the World of Scratch Programming!",
+    type: "special",
+    ageRange: "7 onwards",
+    features: [],
+    overview: `
+    <p>Scratch is a visual programming language designed to teach coding concepts to beginners, especially children. It uses a block-based interface, where users drag and drop code blocks to create interactive stories, games, and animations. Scratch promotes creativity, logical thinking, and problem-solving by making programming fun and easy to understand. It's widely used in schools and by hobbyists to introduce coding in a playful, accessible way.</p>
+    <br />
+    <strong> Beginners: </strong>
+    <p>Scratch is a visual programming language that allows beginners to create interactive stories, games, and animations. It's a fun way to learn coding concepts using simple blocks and drag-and-drop functionality.</p>
+    <br />
+    <strong>Intermediate: </strong>
+    <p>Scratch intermediate users build more complex projects by using advanced features like variables, loops, and broadcasts. This level encourages creativity and problem-solving through deeper interactions and logic in programming.</p>
+    <br />
+    <strong>Advanced: </strong>
+    <p>Advanced Scratch users dive into creating sophisticated projects with custom blocks, complex algorithms, and intricate interactions. They push the boundaries of creativity, combining advanced coding concepts to build interactive games and simulations.</p>
+    `,
+    targetAudience: [],
+    benefits: [],
+  },
+  coding_tynker: {
+    id: "coding_tynker",
+    subjectId: "coding",
+    title: "Tynker",
+    description: "Code Your Imagination: Explore the Fun World of Tynker!",
+    type: "special",
+    ageRange: "7 onwards",
+    features: [],
+    overview: `
+    <p>Tynker is an interactive coding platform aimed at teaching children how to code through games and puzzles. It offers a block-based programming interface, making it easy for beginners to create animations, games, and apps. Tynker also provides courses that cover various coding concepts, from basic to advanced, helping kids build skills in computer science and problem-solving. It's a fun and engaging way to introduce programming to young learners.</p>
+    <br />
+    <strong>Beginners: </strong>
+    <p>Tynker for beginners introduces coding through fun, interactive lessons using visual programming blocks. It helps young learners understand basic coding concepts while creating games, animations, and stories.</p>
+    <br />
+    <strong>Intermediate: </strong>
+    <p>Tynker intermediate users expand their coding skills by exploring logic, variables, and loops. They create more complex games and projects, building a deeper understanding of programming principles.</p>
+    <br />
+    <strong>Advanced: </strong>
+    <p>Tynker advanced users tackle sophisticated projects by mastering object-oriented programming, complex algorithms, and custom functions. They design interactive games, apps, and simulations with refined coding techniques and creative problem-solving.</p>
+    `,
+    targetAudience: [],
+    benefits: [],
+  },
+  coding_microbit: {
+    id: "coding_microbit",
+    subjectId: "coding",
+    title: "Micro:bit",
+    description: "Build, Code, Create: Unlock the Power of Micro:bit!",
+    type: "special",
+    ageRange: "7 onwards",
+    features: [],
+    overview: `
+    <p>The BBC micro:bit is a small, programmable microcontroller designed to help people learn coding and electronics. It features a 5x5 LED display, buttons, sensors, and can be programmed using block-based or text-based coding languages. Ideal for beginners, it enables users to create interactive projects, from games to sensors, all through an accessible platform. It's widely used in education to inspire creativity and problem-solving.</p> 
+    <br /> 
+    <strong>Beginners: </strong>    
+    <p>Micro:bit for beginners offers a hands-on introduction to coding through simple projects using sensors, LEDs, and buttons. It helps learners explore basic programming concepts while creating interactive and fun applications.</p>
+    <br />
+    <strong>Intermediate: </strong>
+    <p>Micro:bit intermediate users dive deeper into coding with more complex projects involving sensors, loops, and variables. They create interactive applications, games, and devices, expanding their understanding of programming and electronics.</p>
+    <br />
+    <strong>Advanced: </strong>
+    <p>Micro:bit advanced users explore sophisticated projects by integrating advanced sensors, radio communication, and custom code. They design innovative solutions and interactive devices, pushing the limits of programming and electronics.</p>
+    `,
+    targetAudience: [],
+    benefits: [],
+  },
+  coding_roblox: {
+    id: "coding_roblox",
+    subjectId: "coding",
+    title: "Roblox",
+    description: "Create Your World: Master Game Development with Roblox!",
+    type: "special",
+    ageRange: "7 onwards",
+    features: [],
+    overview:
+      "Unlock your creativity with a Roblox course that teaches you how to design, build, and script your own games. Learn the basics of game development using Roblox Studio, from creating immersive environments to scripting interactive features. Whether you're a beginner or looking to level up your skills, this course guides you step-by-step in building fun and engaging experiences. Start making your own games and bring your ideas to life in the world of Roblox!",
+    targetAudience: [],
+    benefits: [],
+  },
 
   // English Courses
   english_grade_1: {

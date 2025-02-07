@@ -38,6 +38,10 @@ export const subjectsData: { [key: string]: SubjectData } = {
       "coding_intermediate",
       "coding_advance",
       "coding_professional",
+      "coding_scratch",
+      "coding_tynker",
+      "coding_microbit",
+      "coding_roblox",
     ],
   },
   english: {

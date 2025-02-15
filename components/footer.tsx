@@ -61,6 +61,16 @@ export default function Footer() {
                   Short Courses
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe4t8ZeXfAwjm1IXFKA_642i6w-2yHDY7Q9S0be5GhLyrKO4A/viewform?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-usq-red hover:text-usq-faded-red"
+                >
+                  Become a Tutor
+                </a>
+              </li>
             </ul>
           </div>
 

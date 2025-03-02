@@ -22,8 +22,7 @@ export default function BookingsPage() {
       if (session?.user?.email) {
         try {
           const response = await fetch(
-            // `/api/bookings?attendeeEmail=${session.user.email}`
-            "/api/bookings?attendeeEmail=rairaianusha@gmail.com"
+            `/api/bookings?attendeeEmail=${session.user.email}`
           );
           const data: BookingsResponse = await response.json();
 
@@ -70,7 +69,7 @@ export default function BookingsPage() {
           Welcome, {userName}!
         </h1>
         <p className="text-muted-foreground text-usq-blue-black">
-          A line about learning
+          This is your bookings dashboard.
         </p>
       </div>
 
@@ -156,6 +155,13 @@ export default function BookingsPage() {
                 ) : (
                   <div className="py-8 text-center">
                     You don&apos;t have any upcoming classes.
+                    <br />
+                    <Link
+                      href="/#book-trial"
+                      className="text-usq-cerulean hover:text-usq-red"
+                    >
+                      Book a class now!
+                    </Link>
                   </div>
                 )}
               </TabsContent>

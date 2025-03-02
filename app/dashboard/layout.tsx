@@ -1,33 +1,28 @@
-"use client";
-
-import type React from "react";
-
-import { useEffect } from "react";
-import { useSession } from "next-auth/react";
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/lib/auth";
 
-export default function DashboardLayout({
+export const metadata: Metadata = {
+  title: "Dashboard | Unisqoool",
+  description: "Manage your classes and bookings",
+};
+
+export default async function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { status } = useSession();
+  const session = await getServerSession(authOptions);
 
-  useEffect(() => {
-    if (status === "unauthenticated") {
-      redirect("/auth/login");
-    }
-  }, [status]);
-
-  if (status === "loading") {
-    return <div>Loading...</div>;
+  if (!session) {
+    redirect("/auth/login?callbackUrl=/dashboard/bookings");
   }
 
   return (
-    <div className="flex h-screen font-nunito">
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto p-4 md:p-8">{children}</main>
+    <div className="min-h-screen bg-gray-50">
+      <main className="py-10">{children}</main>
     </div>
   );
 }

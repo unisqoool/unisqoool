@@ -11,6 +11,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { CourseData } from "@/lib/data/courses";
+import { AuthButtons } from "./auth-buttons";
 
 interface MenuItem {
   href: string;
@@ -96,14 +97,27 @@ export default function MobileMenu({ items }: MobileMenuProps) {
               </Link>
             )
           )}
-          <Button
-            asChild
-            variant="primary"
-            className="w-full"
-            onClick={() => setIsOpen(false)}
-          >
-            <Link href="/#book-trial">Book Free Trial</Link>
-          </Button>
+          <div className="pt-2">
+            <Button
+              asChild
+              variant="outline"
+              className="w-full"
+              onClick={() => setIsOpen(false)}
+            >
+              <AuthButtons
+                className="w-full my-4"
+                onClick={() => setIsOpen(false)}
+              />
+            </Button>
+            <Button
+              asChild
+              variant="primary"
+              className="w-full"
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href="/#book-trial">Book Free Trial</Link>
+            </Button>
+          </div>
         </nav>
       </SheetContent>
     </Sheet>

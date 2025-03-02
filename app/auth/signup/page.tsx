@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { LoginForm } from "@/components/auth/login-form";
+import { SignUpForm } from "@/components/auth/signup-form";
 import { SocialButton } from "@/components/auth/social-button";
 import {
   Card,
@@ -13,26 +13,26 @@ import {
 import { FcGoogle } from "react-icons/fc";
 
 export const metadata: Metadata = {
-  title: "Login | Unisqoool",
-  description: "Login to your account",
+  title: "Sign Up | Unisqoool",
+  description: "Create a new account",
 };
 
-export default function LoginPage() {
+export default function SignUpPage() {
   return (
-    <div className="container flex min-h-screen w-screen flex-col items-center justify-center">
-      <div className="mx-auto mb-40 flex w-full flex-col justify-center sm:w-[350px]">
+    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+      <div className="mx-auto mb-24 flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl text-usq-red">Sign In</CardTitle>
+            <CardTitle className="text-xl text-usq-red">Sign Up</CardTitle>
             <CardDescription>
-              Choose your preferred sign in method
+              Choose your preferred sign up method
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <SocialButton
               provider="google"
               icon={<FcGoogle className="h-5 w-5" />}
-              text="Sign in with Google"
+              text="Sign up with Google"
             />
 
             <div className="relative">
@@ -46,16 +46,13 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <LoginForm />
+            <SignUpForm />
           </CardContent>
           <CardFooter className="flex justify-center">
             <p className="text-sm text-muted-foreground">
-              Don&apos;t have an account?{" "}
-              <Link
-                href="/auth/signup"
-                className="text-primary hover:underline"
-              >
-                Sign up
+              Already have an account?{" "}
+              <Link href="/auth/login" className="text-primary hover:underline">
+                Sign in
               </Link>
             </p>
           </CardFooter>

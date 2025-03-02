@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { getCourseDataBySubjectId } from "@/lib/data/courses";
 import ClientHeader from "./client-header";
+import { AuthButtons } from "./auth-buttons";
 
 const menuItems = [
   { href: "/about", label: "About Us" },
@@ -53,6 +54,7 @@ export default function Header() {
           <ClientHeader menuItems={menuItems} />
 
           <div className="bg-white text-black hidden lg:flex items-center space-x-4">
+            <AuthButtons />
             <Button asChild variant="primary">
               <Link href="/#book-trial">Book Free Trial</Link>
             </Button>

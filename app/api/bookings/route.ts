@@ -120,3 +120,5 @@ async function fetchCalComAppointments(
 
   return data.data;
 }
+
+export const dynamic = "force-dynamic";

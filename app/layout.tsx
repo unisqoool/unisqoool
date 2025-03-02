@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import FAQSection from "@/components/faq-section";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
+import { Providers } from "./providers";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -57,11 +58,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${nunitoSans.variable} ${podkova.variable} ${mansalva.variable} antialiased m-0 p-0 font-nunito-sans`}
       >
-        <Header />
-        <main className="min-h-[60vh]">{children}</main>
-        <FAQSection />
-        <CTASection />
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="min-h-[60vh]">{children}</main>
+          <FAQSection />
+          <CTASection />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

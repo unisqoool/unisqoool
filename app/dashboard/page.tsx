@@ -1,8 +1,7 @@
 "use client";
 
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
   const { data: session } = useSession();
@@ -11,19 +10,28 @@ export default function DashboardPage() {
   if (!session) {
     router.push("/auth/login");
     return null;
+  } else {
+    router.push("/dashboard/bookings");
+    return null;
   }
 
-  return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold font-nunito mb-4 text-usq-red">
-        Welcome to your Dashboard
-      </h1>
-      <p className="text-usq-blue-black font-nunito">
-        Hello, {session.user?.name || "User"}!
-      </p>
-      <Button variant="outline" onClick={() => signOut()} className="font-nunito mt-4">
-        Sign out
-      </Button>
-    </div>
-  );
+  // return (
+  //   <div className="p-8">
+  //     <h1 className="text-4xl font-bold font-nunito mb-4 text-usq-red">
+  //       Welcome to your Dashboard, {session.user?.name || "User"}!
+  //     </h1>
+  //     <>
+  //       <Button asChild variant="primary" className="font-nunito mt-4 mx-4">
+  //         <Link href="/dashboard/bookings">View Bookings</Link>
+  //       </Button>
+  //       <Button
+  //         variant="outline"
+  //         onClick={() => signOut()}
+  //         className="font-nunito mt-4"
+  //       >
+  //         Sign out
+  //       </Button>
+  //     </>
+  //   </div>
+  // );
 }

@@ -98,16 +98,8 @@ export default function MobileMenu({ items }: MobileMenuProps) {
             )
           )}
           <div className="pt-2">
-            <Button
-              asChild
-              variant="outline"
-              className="w-full"
-              onClick={() => setIsOpen(false)}
-            >
-              <AuthButtons
-                className="w-full my-4"
-                onClick={() => setIsOpen(false)}
-              />
+            <Button asChild className="w-full" onClick={() => setIsOpen(false)}>
+              <AuthButtons className="w-full my-4" />
             </Button>
             <Button
               asChild

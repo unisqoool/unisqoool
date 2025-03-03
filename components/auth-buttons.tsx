@@ -21,7 +21,7 @@ export function AuthButtons({ ...props }) {
     return (
       <Button
         asChild
-        variant="outline"
+        variant="secondary"
         className={props.className}
         onClick={props.onClick}
       >
@@ -37,7 +37,7 @@ export function AuthButtons({ ...props }) {
       className={props.className}
       onClick={props.onClick}
     >
-      <Link href="/auth/login">Sign In</Link>
+      <Link href="/auth/login">Login</Link>
     </Button>
   );
 }

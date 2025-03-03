@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { LoginForm } from "@/components/auth/login-form";
-import { SocialButton } from "@/components/auth/social-button";
 import {
   Card,
   CardContent,
@@ -10,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { FcGoogle } from "react-icons/fc";
 
 export const metadata: Metadata = {
   title: "Login | Unisqoool",
@@ -24,28 +22,9 @@ export default function LoginPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-xl text-usq-red">Sign In</CardTitle>
-            <CardDescription>
-              Choose your preferred sign in method
-            </CardDescription>
+            <CardDescription>Login with your email address</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <SocialButton
-              provider="google"
-              icon={<FcGoogle className="h-5 w-5" />}
-              text="Sign in with Google"
-            />
-
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">
-                  Or continue with
-                </span>
-              </div>
-            </div>
-
             <LoginForm />
           </CardContent>
           <CardFooter className="flex justify-center">
@@ -53,7 +32,7 @@ export default function LoginPage() {
               Don&apos;t have an account?{" "}
               <Link
                 href="/auth/signup"
-                className="text-primary hover:underline"
+                className="text-usq-cerulean hover:text-usq-red"
               >
                 Sign up
               </Link>

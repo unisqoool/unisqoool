@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { BookingCard } from "@/components/bookings-card";
 import type { Booking, BookingsResponse } from "@/lib/types/booking";
 import { isUpcoming, isPast } from "@/lib/utils";
@@ -26,7 +25,7 @@ export default function BookingsPage() {
           );
           const data: BookingsResponse = await response.json();
 
-          if (data.status === "success" && !!data.data) {
+          if (data.status === "success" && data.data) {
             setBookings(data.data);
           }
         } catch (error) {
@@ -43,11 +42,9 @@ export default function BookingsPage() {
   const upcomingBookings = bookings.filter(
     (booking) => booking.status !== "cancelled" && isUpcoming(booking.start)
   );
-
   const pastBookings = bookings.filter(
     (booking) => booking.status !== "cancelled" && isPast(booking.start)
   );
-
   const cancelledBookings = bookings.filter(
     (booking) => booking.status === "cancelled"
   );
@@ -56,19 +53,21 @@ export default function BookingsPage() {
 
   if (isLoading) {
     return (
-      <div className="container mx-auto py-8">
-        <div className="py-8 text-center">Loading your bookings...</div>
+      <div className="container mx-auto py-12">
+        <div className="py-8 text-center text-usq-blue-black text-xl">
+          Loading your bookings...
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-2 text-usq-red">
+    <div className="container mx-auto py-12 px-4">
+      <div className="mb-12 text-center">
+        <h1 className="text-4xl font-bold mb-4 text-usq-red">
           Welcome, {userName}!
         </h1>
-        <p className="text-muted-foreground text-usq-blue-black">
+        <p className="text-lg text-usq-blue-black">
           This is your bookings dashboard.
         </p>
       </div>
@@ -89,71 +88,55 @@ export default function BookingsPage() {
         </div>
       ) : (
         <Tabs
-          defaultValue={"upcoming"}
+          defaultValue="upcoming"
           value={activeTab}
           onValueChange={setActiveTab}
           className="w-full"
         >
-          <TabsList className="mb-8 border-b w-full justify-start rounded-none bg-transparent p-0">
+          <TabsList className="w-full mb-8 justify-center gap-2 bg-transparent">
             <TabsTrigger
               value="upcoming"
-              className={`rounded-t-lg px-6 py-3 text-sm font-medium ${
+              className={`px-6 py-3 text-lg font-medium rounded-t-md focus:outline-none transition-colors bg-usq-faded-peach hover:bg-usq-peach text-usq-blue-black ${
                 activeTab === "upcoming"
-                  ? "border-b-2 border-primary bg-muted"
-                  : "border-b border-transparent hover:border-muted-foreground/30"
+                  ? "border-b-2 border-usq-faded-red"
+                  : "border-b border-transparent"
               }`}
             >
-              Upcoming Class
+              Upcoming Classes
             </TabsTrigger>
             <TabsTrigger
               value="past"
-              className={`rounded-t-lg px-6 py-3 text-sm font-medium ${
+              className={`px-6 py-3 text-lg font-medium rounded-t-md focus:outline-none transition-colors bg-usq-faded-peach hover:bg-usq-peach text-usq-blue-black ${
                 activeTab === "past"
-                  ? "border-b-2 border-primary bg-muted"
-                  : "border-b border-transparent hover:border-muted-foreground/30"
+                  ? "border-b-2 border-usq-faded-red bg-usq-peach"
+                  : "border-b border-transparent"
               }`}
             >
-              Past
+              Past Classes
             </TabsTrigger>
             <TabsTrigger
               value="cancelled"
-              className={`rounded-t-lg px-6 py-3 text-sm font-medium ${
+              className={`px-6 py-3 text-lg font-medium rounded-t-md focus:outline-none transition-colors bg-usq-faded-peach hover:bg-usq-peach text-usq-blue-black ${
                 activeTab === "cancelled"
-                  ? "border-b-2 border-primary bg-muted"
-                  : "border-b border-transparent hover:border-muted-foreground/30"
+                  ? "border-b-2 border-usq-faded-red bg-usq-peach"
+                  : "border-b border-transparent"
               }`}
             >
-              Cancelled
+              Cancelled Classes
             </TabsTrigger>
           </TabsList>
 
-          <Card>
-            <CardContent className="p-6">
-              {/* <div className="grid grid-cols-[auto_1fr_1fr_auto_1fr_auto] gap-4 px-4 py-2 font-medium text-muted-foreground">
-                  <div>Icon</div>
-                  <div>Subject Name</div>
-                  <div className="text-center">Course</div>
-                  <div className="text-center">Start</div>
-                  <div className="text-center">End</div>
-                  <div></div>
-                </div>
-    
-                <Separator className="my-2" /> */}
-
-              <TabsContent value="upcoming" className="mt-0 space-y-0">
-                {isLoading ? (
-                  <div className="py-8 text-center">
-                    Loading your upcoming classes...
-                  </div>
-                ) : upcomingBookings.length > 0 ? (
+          <Card className="shadow-sm max-w-3xl mx-auto">
+            <CardContent className="p-6 space-y-6">
+              <TabsContent value="upcoming">
+                {upcomingBookings.length > 0 ? (
                   upcomingBookings.map((booking) => (
-                    <div key={booking.id}>
+                    <div key={booking.id} className="my-4">
                       <BookingCard booking={booking} />
-                      <Separator />
                     </div>
                   ))
                 ) : (
-                  <div className="py-8 text-center">
+                  <div className="py-8 text-center text-usq-blue-black">
                     You don&apos;t have any upcoming classes.
                     <br />
                     <Link
@@ -166,39 +149,29 @@ export default function BookingsPage() {
                 )}
               </TabsContent>
 
-              <TabsContent value="past" className="mt-0 space-y-0">
-                {isLoading ? (
-                  <div className="py-8 text-center">
-                    Loading your past classes...
-                  </div>
-                ) : pastBookings.length > 0 ? (
+              <TabsContent value="past">
+                {pastBookings.length > 0 ? (
                   pastBookings.map((booking) => (
-                    <div key={booking.id}>
+                    <div key={booking.id} className="my-4">
                       <BookingCard booking={booking} />
-                      <Separator />
                     </div>
                   ))
                 ) : (
-                  <div className="py-8 text-center">
+                  <div className="py-8 text-center text-usq-blue-black">
                     You don&apos;t have any past classes.
                   </div>
                 )}
               </TabsContent>
 
-              <TabsContent value="cancelled" className="mt-0 space-y-0">
-                {isLoading ? (
-                  <div className="py-8 text-center">
-                    Loading your cancelled classes...
-                  </div>
-                ) : cancelledBookings.length > 0 ? (
+              <TabsContent value="cancelled">
+                {cancelledBookings.length > 0 ? (
                   cancelledBookings.map((booking) => (
-                    <div key={booking.id}>
+                    <div key={booking.id} className="my-4">
                       <BookingCard booking={booking} />
-                      <Separator />
                     </div>
                   ))
                 ) : (
-                  <div className="py-8 text-center">
+                  <div className="py-8 text-center text-usq-blue-black">
                     You don&apos;t have any cancelled classes.
                   </div>
                 )}
@@ -207,13 +180,13 @@ export default function BookingsPage() {
           </Card>
         </Tabs>
       )}
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-8">
         <Button
           variant="outline"
           onClick={() => signOut()}
-          className="font-nunito mt-4"
+          className="font-nunito"
         >
-          Sign out
+          Sign Out
         </Button>
       </div>
     </div>

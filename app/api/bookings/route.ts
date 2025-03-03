@@ -69,6 +69,8 @@ async function fetchCalComAppointments(
 
   // Add query parameters
   apiUrl.searchParams.append("attendeeEmail", email);
+  // &status=upcoming,past,cancelled
+  apiUrl.searchParams.append("status", "upcoming,past,cancelled");
 
   // Add other query parameters if provided
   [

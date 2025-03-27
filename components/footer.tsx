@@ -62,6 +62,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/blog"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSe4t8ZeXfAwjm1IXFKA_642i6w-2yHDY7Q9S0be5GhLyrKO4A/viewform?usp=sharing"
                   target="_blank"

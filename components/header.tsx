@@ -33,6 +33,7 @@ const menuItems = [
     courses: getCourseDataBySubjectId("hindi"),
   },
   { href: "/short-courses", label: "Short Courses" },
+  { href: "/blog", label: "Blogs" },
 ];
 
 export default function Header() {

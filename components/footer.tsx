@@ -8,9 +8,10 @@ export default function Footer() {
       className="bg-white text-black py-12 md:py-16 px-6 ms-1 lg:ms-6"
     >
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Quick Links */}
-          <div>
+        {/* Desktop: 3 columns | Mobile: 2 columns with logo on right */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Quick Links - Always in first column */}
+          <div className="col-span-1">
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -82,68 +83,71 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Media */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Social Media</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="https://instagram.com/unisqoool"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.linkedin.com/in/unisqoool"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://x.com/unisqoool"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  X (Twitter)
-                </Link>
-              </li>
-            </ul>
+          {/* Social Media + Our Policies - Combined in second column */}
+          <div className="col-span-1">
+            {/* Social Media */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-4">Social Media</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="https://instagram.com/unisqoool"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.linkedin.com/company/unisqoool"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://x.com/unisqoool"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    X (Twitter)
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Our Policies */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Our Policies</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/refund-policy"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                  >
+                    Refund Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Our Policies */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Our Policies</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/refund-policy"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Info */}
-          <div>
+          {/* Company Info - Third column on desktop, right column on mobile */}
+          <div className="col-span-2 lg:col-span-1 order-last">
             <Link href="/" className="flex justify-start w-30">
               <Image
                 src="/assets/logo.png"
@@ -152,7 +156,7 @@ export default function Footer() {
                 height={85}
               />
             </Link>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mt-3">
               <li className="text-gray-600">
                 Email:{" "}
                 <Link
@@ -162,12 +166,26 @@ export default function Footer() {
                   info@unisqoool.com
                 </Link>
               </li>
-              {/* <li className="text-gray-600">
-                Phone:{" "}
-                <Link href="tel:+919876543210" className="hover:text-gray-900">
-                  +91 98765 43210
+              <li className="text-gray-600">
+                Phone Number:{" "}
+                <Link
+                  href="tel:+919220376004"
+                  className="text-usq-blue-black hover:text-usq-cerulean"
+                >
+                  +91 9220376004
                 </Link>
-              </li> */}
+              </li>
+              <li className="text-gray-600 mt-4">
+                Legal Name:{" "}
+                <span className="text-usq-blue-black">DUS EDVENTURE TECH</span>
+              </li>
+              <li className="text-gray-600">
+                Registered Address:{" "}
+                <span className="text-usq-blue-black">
+                  House no. 53, Block B2, <br />
+                  Raghubir Nagar, New Delhi -110027
+                </span>
+              </li>
             </ul>
           </div>
         </div>

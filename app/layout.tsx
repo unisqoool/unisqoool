@@ -1,12 +1,12 @@
+// app/layout.tsx
 import { Nunito, Nunito_Sans, Podkova, Mansalva } from "next/font/google";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
-import FAQSection from "@/components/faq-section";
-import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 import { Providers } from "./providers";
+import LayoutExtras from "@/components/layout-extras";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -61,8 +61,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main className="min-h-[60vh]">{children}</main>
-          <FAQSection />
-          <CTASection />
+          <LayoutExtras />
           <Footer />
         </Providers>
       </body>

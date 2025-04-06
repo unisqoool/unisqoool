@@ -128,6 +128,14 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
+                    href="/terms-and-conditions"
+                    className="text-usq-blue-black hover:text-usq-cerulean"
+                  >
+                    Terms and Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/privacy-policy"
                     className="text-usq-blue-black hover:text-usq-cerulean"
                   >
@@ -157,11 +165,35 @@ export default function Footer() {
               />
             </Link>
             <ul className="space-y-2 mt-3">
+              <li className="text-gray-600 mt-4">
+                GSTIN:{" "}
+                <a
+                  href="https://services.gst.gov.in/services/searchtp"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-usq-blue-black font-bold hover:text-usq-cerulean"
+                >
+                  07AAXFD5225B1ZH
+                </a>
+              </li>
+              <li className="text-gray-600">
+                Legal Name:{" "}
+                <span className="text-usq-blue-black font-bold">
+                  DUS EDVENTURE TECH
+                </span>
+              </li>
+              <li className="text-gray-600">
+                Registered Address:{" "}
+                <span className="text-usq-blue-black font-bold">
+                  House no. 53, Block B2, <br />
+                  Raghubir Nagar, New Delhi -110027
+                </span>
+              </li>
               <li className="text-gray-600">
                 Email:{" "}
                 <Link
                   href="mailto:info@unisqoool.com"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
+                  className="text-usq-blue-black font-bold hover:text-usq-cerulean"
                 >
                   info@unisqoool.com
                 </Link>
@@ -170,21 +202,10 @@ export default function Footer() {
                 Phone Number:{" "}
                 <Link
                   href="tel:+919220376004"
-                  className="text-usq-blue-black hover:text-usq-cerulean"
+                  className="text-usq-blue-black font-bold hover:text-usq-cerulean"
                 >
                   +91 9220376004
                 </Link>
-              </li>
-              <li className="text-gray-600 mt-4">
-                Legal Name:{" "}
-                <span className="text-usq-blue-black">DUS EDVENTURE TECH</span>
-              </li>
-              <li className="text-gray-600">
-                Registered Address:{" "}
-                <span className="text-usq-blue-black">
-                  House no. 53, Block B2, <br />
-                  Raghubir Nagar, New Delhi -110027
-                </span>
               </li>
             </ul>
           </div>

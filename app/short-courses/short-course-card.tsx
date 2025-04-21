@@ -1,7 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { Clock, Users } from "lucide-react";
+import { useCallback } from "react";
+import { useSession } from "next-auth/react";
 
 interface ShortCourseData {
   id: string;
@@ -20,6 +24,51 @@ interface ShortCourseCardProps {
 }
 
 export function ShortCourseCard({ course }: ShortCourseCardProps) {
+  const { data: session } = useSession();
+  const handleEnroll = useCallback(async () => {
+    // 1. create order on server
+    const res = await fetch("/api/razorpay/orders", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        amount: course.totalPrice,
+        receipt: course.id,
+        currency: "USD",
+      }),
+    });
+    const { order } = await res.json();
+
+    // 2. configure checkout
+    const options = {
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, // loaded from env
+      amount: order.amount,
+      currency: order.currency,
+      name: "UNisqoool",
+      description: course.id,
+      order_id: order.id,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      handler: (response: any) => {
+        // on success: redirect or show confirmation
+        window.location.href = `/payment-success?order_id=${response.razorpay_order_id}&payment_id=${response.razorpay_payment_id}`;
+      },
+      prefill: {
+        // only spread in these props when they exist:
+        ...(session?.user?.email && session?.user?.name
+          ? {
+              email: session.user.email,
+              name: session.user.name,
+            }
+          : {}),
+      },
+      theme: { color: "#ef7167" },
+    };
+
+    // 3. open Razorpay checkout
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const razorpay = new (window as any).Razorpay(options);
+    razorpay.open();
+  }, [course, session]);
+
   return (
     <Card className="border-2 border-usq-peach rounded-lg overflow-hidden py-4">
       <CardContent className="p-6 text-center md:text-start">
@@ -53,8 +102,8 @@ export function ShortCourseCard({ course }: ShortCourseCardProps) {
             <span>·</span>
             <span>Total {course.totalClasses} classes</span>
           </div>
-          <Button asChild variant="primary" className="px-8">
-            <Link href="#">Enroll Now</Link>
+          <Button onClick={handleEnroll} variant="primary" className="px-8">
+            Enroll Now
           </Button>
         </div>
 

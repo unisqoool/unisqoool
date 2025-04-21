@@ -9,6 +9,9 @@ interface ShortCourseData {
   title: string;
   description: string;
   gradeRange?: string;
+  pricePerClass: number;
+  totalClasses: number;
+  totalPrice: number;
   duration?: string;
 }
 
@@ -23,6 +26,7 @@ export function ShortCourseCard({ course }: ShortCourseCardProps) {
         <h3 className="text-3xl font-bold mb-4 font-podkova text-usq-red">
           {course.title}
         </h3>
+
         <div className="flex flex-col justify-center md:justify-start items-center gap-2 mb-6">
           {course.gradeRange && (
             <div className="flex w-full justify-center md:justify-start items-center gap-2 text-sm text-gray-500">
@@ -37,12 +41,34 @@ export function ShortCourseCard({ course }: ShortCourseCardProps) {
             </div>
           )}
         </div>
+
         <p className="text-gray-500 mb-6 font-geist-sans min-h-[60px]">
           {course.description}
         </p>
-        <Button asChild variant="primary" className="px-8">
-          <Link href="#">Enroll Now</Link>
-        </Button>
+
+        {/* desktop: price + classes + button inline */}
+        <div className="hidden md:flex justify-between items-center mt-4">
+          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <span>${course.pricePerClass} per class</span>
+            <span>·</span>
+            <span>Total {course.totalClasses} classes</span>
+          </div>
+          <Button asChild variant="primary" className="px-8">
+            <Link href="#">Enroll Now</Link>
+          </Button>
+        </div>
+
+        {/* mobile: stacked & centered */}
+        <div className="flex md:hidden flex-col items-center gap-2 mt-4">
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+            <span>${course.pricePerClass} per class</span>
+            <span>·</span>
+            <span>Total {course.totalClasses} classes</span>
+          </div>
+          <Button asChild variant="primary" className="px-8">
+            <Link href="#">Enroll Now</Link>
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

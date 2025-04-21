@@ -22,7 +22,7 @@ export default function PaymentSuccessPage({
 
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl font-bold text-usq-red mb-4">
-          🎉 Payment Successful!
+          🎉 <br /> Payment Successful!
         </h1>
         <p className="text-lg text-usq-blue-black mb-6">
           Thank you for enrolling. Your payment has been received.

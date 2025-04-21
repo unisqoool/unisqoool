@@ -97,7 +97,7 @@ export function ShortCourseCard({ course }: ShortCourseCardProps) {
         {/* desktop: price + classes + button inline */}
         <div className="hidden md:flex justify-between items-center mt-4">
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span>${course.pricePerClass} per class</span>
+            <span>{course.pricePerClass} USD per class</span>
             <span>·</span>
             <span>Total {course.totalClasses} classes</span>
           </div>

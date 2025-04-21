@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Link from "next/link";
 import { Clock, Users } from "lucide-react";
 import { useCallback } from "react";
 import { useSession } from "next-auth/react";
@@ -114,8 +113,8 @@ export function ShortCourseCard({ course }: ShortCourseCardProps) {
             <span>·</span>
             <span>Total {course.totalClasses} classes</span>
           </div>
-          <Button asChild variant="primary" className="px-8">
-            <Link href="#">Enroll Now</Link>
+          <Button onClick={handleEnroll} variant="primary" className="px-8">
+            Enroll Now
           </Button>
         </div>
       </CardContent>

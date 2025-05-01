@@ -55,6 +55,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer={true}
+          type="text/javascript"
+          src="https://dus-edventure-tech.odoo.com/im_livechat/loader/2"
+        ></script>
+
+        <script
+          defer={true}
+          type="text/javascript"
+          src="https://dus-edventure-tech.odoo.com/im_livechat/assets_embed.js"
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} ${nunitoSans.variable} ${podkova.variable} ${mansalva.variable} antialiased m-0 p-0 font-nunito-sans`}
       >

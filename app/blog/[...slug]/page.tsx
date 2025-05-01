@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type PageProps = {
@@ -11,28 +11,44 @@ export default function BlogSlugPage({ params }: PageProps) {
   const router = useRouter();
   const slugPath = params.slug.join("/");
   const blogUrl = `https://odoo.unisqoool.com/blog/${slugPath}`;
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [iframeHeight, setIframeHeight] = useState("100vh");
 
   useEffect(() => {
     function handleMessage(event: MessageEvent) {
       if (
-        event.data?.type === "redirect" &&
-        typeof event.data.url === "string"
+        event.origin === "https://odoo.unisqoool.com" &&
+        typeof event.data === "object"
       ) {
-        const newPath = event.data.url.replace(
-          "https://odoo.unisqoool.com/blog/",
-          "/blog/"
-        );
-        router.push(newPath);
+        if (
+          event.data.type === "redirect" &&
+          typeof event.data.url === "string"
+        ) {
+          const newPath = event.data.url.replace(
+            "https://odoo.unisqoool.com/blog/",
+            "/blog/"
+          );
+          router.push(newPath);
+        } else if (
+          event.data.type === "height" &&
+          typeof event.data.height === "number"
+        ) {
+          setIframeHeight(
+            `${Math.max(event.data.height, window.innerHeight)}px`
+          );
+        }
       }
     }
+
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, [router]);
 
   return (
     <iframe
+      ref={iframeRef}
       src={blogUrl}
-      style={{ width: "100%", height: "100vh", border: "none" }}
+      style={{ width: "100%", height: iframeHeight, border: "none" }}
       title="Odoo Blog"
     />
   );

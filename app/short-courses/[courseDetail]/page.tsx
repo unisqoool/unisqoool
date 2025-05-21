@@ -16,7 +16,8 @@ const shortCourses = {
     id: "short_course_financial_literacy",
     subjectId: "short_course",
     title: "Financial Literacy",
-    description: "Developing essential financial skills focusing on budgeting, saving, and investing for personal and professional success",
+    description:
+      "Developing essential financial skills focusing on budgeting, saving, and investing for personal and professional success",
     gradeRange: "6th to 10th",
     pricePerClass: 15,
     totalClasses: 15,
@@ -35,7 +36,8 @@ const shortCourses = {
     id: "short_course_multiplication_tables",
     subjectId: "short_course",
     title: "Learn Multiplication Tables",
-    description: "Using engaging methods to help students effectively learn and master multiplication tables for faster and more accurate calculations",
+    description:
+      "Using engaging methods to help students effectively learn and master multiplication tables for faster and more accurate calculations",
     gradeRange: "1st to 4th",
     pricePerClass: 10,
     totalClasses: 4,
@@ -48,9 +50,217 @@ const shortCourses = {
       "Build confidence in mathematical operations",
       "Learn fun and effective memorization techniques"
     ]
+  },
+  short_course_master_multiplication: {
+    id: "short_course_master_multiplication",
+    subjectId: "short_course",
+    title: "Master Multiplication",
+    description:
+      "Building speed and accuracy in multiplication through interactive methods to reinforce key concepts for long-term success",
+    gradeRange: "3rd to 6th Grade",
+    pricePerClass: 12,
+    totalClasses: 8,
+    totalPrice: 96,
+    duration: "55 min",
+    learningOutcomes: [
+      "Reinforce foundational multiplication skills",
+      "Improve speed and accuracy in multiplication",
+      "Solve complex multiplication problems with ease",
+      "Use interactive tools and strategies",
+      "Apply multiplication in practical scenarios"
+    ]
+  },
+  short_course_decode_division: {
+    id: "short_course_decode_division",
+    subjectId: "short_course",
+    title: "Decode Division",
+    description:
+      "Conquering division by simplifying complex division problems and building confidence through engaging techniques",
+    gradeRange: "3rd to 6th Grade",
+    pricePerClass: 12,
+    totalClasses: 8,
+    totalPrice: 96,
+    duration: "55 min",
+    learningOutcomes: [
+      "Understand division concepts and terminology",
+      "Break down complex division problems",
+      "Relate division to multiplication",
+      "Boost confidence through repetitive practice",
+      "Apply division in real-life problem-solving"
+    ]
+  },
+  short_course_fight_fractions: {
+    id: "short_course_fight_fractions",
+    subjectId: "short_course",
+    title: "Fight Fractions",
+    description:
+      "Mastering fractions by simplifying and solving related problems with confidence",
+    gradeRange: "3rd to 5th Grade",
+    pricePerClass: 14,
+    totalClasses: 10,
+    totalPrice: 140,
+    duration: "55 min",
+    learningOutcomes: [
+      "Understand fractions and their types",
+      "Simplify and compare fractions",
+      "Perform operations on fractions",
+      "Apply fractions in practical math problems",
+      "Visualize fractions using engaging tools"
+    ]
+  },
+  short_course_ace_algebra: {
+    id: "short_course_ace_algebra",
+    subjectId: "short_course",
+    title: "Ace Algebra",
+    description:
+      "Building a strong foundation in algebraic problem-solving by focusing on key concepts like equations and variables",
+    gradeRange: "5th to 8th Grade",
+    pricePerClass: 15,
+    totalClasses: 15,
+    totalPrice: 225,
+    duration: "55 min",
+    learningOutcomes: [
+      "Understand algebraic expressions and equations",
+      "Solve linear equations with variables",
+      "Learn to simplify and factor expressions",
+      "Graph basic algebraic functions",
+      "Apply algebra in real-world contexts"
+    ]
+  },
+  short_course_creative_writing: {
+    id: "short_course_creative_writing",
+    subjectId: "short_course",
+    title: "Creative Writing: Turn Imagination into Short Story",
+    description:
+      "Developing writing skills, story structure, and storytelling techniques to turn imagination into compelling short stories",
+    gradeRange: "3rd to 6th",
+    pricePerClass: 10,
+    totalClasses: 15,
+    totalPrice: 150,
+    duration: "55 min",
+    learningOutcomes: [
+      "Create engaging story plots",
+      "Develop imaginative characters",
+      "Understand story structure (beginning, middle, end)",
+      "Use literary devices like dialogue and imagery",
+      "Enhance vocabulary and grammar through writing"
+    ]
+  },
+  short_course_command_grammar_1: {
+    id: "short_course_command_grammar_1",
+    subjectId: "short_course",
+    title: "Command Over Grammar",
+    description:
+      "Enhancing writing and speaking skills by focusing on key grammatical rules and structures for clear communication",
+    gradeRange: "1st to 4th Grade",
+    pricePerClass: 10,
+    totalClasses: 15,
+    totalPrice: 150,
+    duration: "55 min",
+    learningOutcomes: [
+      "Identify and use parts of speech correctly",
+      "Build grammatically correct sentences",
+      "Understand subject-verb agreement",
+      "Use punctuation marks properly",
+      "Enhance clarity in writing and speaking"
+    ]
+  },
+  short_course_command_grammar_2: {
+    id: "short_course_command_grammar_2",
+    subjectId: "short_course",
+    title: "Command Over Grammar",
+    description:
+      "Enhancing writing and speaking skills by focusing on key grammatical rules and structures for clear communication",
+    gradeRange: "5th to 8th Grade",
+    pricePerClass: 12,
+    totalClasses: 15,
+    totalPrice: 180,
+    duration: "55 min",
+    learningOutcomes: [
+      "Master advanced grammatical concepts",
+      "Eliminate common grammatical errors",
+      "Improve sentence structure and coherence",
+      "Apply grammar rules in essays and reports",
+      "Boost verbal and written communication"
+    ]
+  },
+  short_course_learn_to_read_novel: {
+    id: "short_course_learn_to_read_novel",
+    subjectId: "short_course",
+    title: "Learn to Read a Novel",
+    description:
+      "Developing skills for effective novel comprehension, analysis, and appreciation of literary techniques",
+    gradeRange: "1st to 4th",
+    pricePerClass: 10,
+    totalClasses: 12,
+    totalPrice: 120,
+    duration: "55 min",
+    learningOutcomes: [
+      "Improve reading fluency and comprehension",
+      "Understand characters, plot, and setting",
+      "Identify literary devices like similes and metaphors",
+      "Enhance vocabulary and inference skills",
+      "Develop love for reading and literature"
+    ]
+  },
+  short_course_storytelling: {
+    id: "short_course_storytelling",
+    subjectId: "short_course",
+    title: "Master the Art of Storytelling via Creative Writing",
+    description:
+      "Learning character development, plot, and narrative techniques to craft engaging stories that captivate readers",
+    gradeRange: "3rd to 6th",
+    pricePerClass: 12,
+    totalClasses: 10,
+    totalPrice: 120,
+    duration: "55 min",
+    learningOutcomes: [
+      "Master narrative structure and plot development",
+      "Create compelling characters",
+      "Use sensory details to enhance stories",
+      "Build suspense and engage readers",
+      "Deliver stories effectively through writing or speech"
+    ]
+  },
+  short_course_coding_game: {
+    id: "short_course_coding_game",
+    subjectId: "short_course",
+    title: "Coding Adventure: Create Your Own Short Game",
+    description:
+      "Learning basic programming concepts and fostering creativity through game development",
+    gradeRange: "1st to 4th",
+    pricePerClass: 10,
+    totalClasses: 10,
+    totalPrice: 100,
+    duration: "55 min",
+    learningOutcomes: [
+      "Understand basic coding concepts (loops, events)",
+      "Create simple games using block-based coding",
+      "Apply logical thinking and sequencing",
+      "Encourage creativity in game design",
+      "Test and debug simple code"
+    ]
+  },
+  short_course_interactive_greeting_card: {
+    id: "short_course_interactive_greeting_card",
+    subjectId: "short_course",
+    title: "Create an Interactive Holiday Greeting Card",
+    description:
+      "Teaching basic programming and design skills to create personalized, engaging digital greeting cards",
+    gradeRange: "1st to 4th",
+    pricePerClass: 10,
+    totalClasses: 10,
+    totalPrice: 100,
+    duration: "55 min",
+    learningOutcomes: [
+      "Design personalized greeting cards",
+      "Learn basic programming for interactivity",
+      "Understand animation and transitions",
+      "Incorporate text, images, and sound",
+      "Build confidence in creative digital expression"
+    ]
   }
 };
-
 export default function ShortCourseDetails() {
   const { courseDetail: id } = useParams();
   const courseId = Array.isArray(id) ? id[0] : id;

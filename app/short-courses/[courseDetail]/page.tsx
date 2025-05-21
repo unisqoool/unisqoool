@@ -10,6 +10,7 @@ import { useSession } from "next-auth/react";
 import Script from "next/script";
 
 //TODO need api for this
+// This is just a dummy data
 const shortCourses = {
   short_course_financial_literacy: {
     id: "short_course_financial_literacy",

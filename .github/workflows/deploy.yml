@@ -18,19 +18,18 @@ jobs:
           KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
         run: |
           mkdir -p ~/.ssh
-          echo "$PRIVATE_KEY" > ~/.ssh/id_rsa
+          printf '%s\n' "$PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          echo "$KNOWN_HOSTS"  > ~/.ssh/known_hosts
+          printf '%s\n' "$KNOWN_HOSTS"  > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
       - name: SSH & deploy
         run: |
           ssh -o StrictHostKeyChecking=yes \
-              ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
-            cd unisqoool
-            git pull
-            npm install
-            npm run build
-            pm2 restart 0
-          EOF
+              ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+              'bash -lc "cd ~/unisqoool && \
+                         git pull && \
+                         npm install && \
+                         npm run build && \
+                         pm2 restart 0"'

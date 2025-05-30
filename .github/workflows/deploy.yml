@@ -1,29 +1,36 @@
 name: Deploy to VPS
 
-# Trigger on every push (merge) to production
 on:
   push:
-    branches:
-      - production
+    branches: [production]
 
 jobs:
   deploy:
-    name: SSH & Deploy
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v0.1.5
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_PRIVATE_KEY }}
-          # disable strict host key checking to avoid interactive prompt
-          known_hosts: |
-            ${{ secrets.KNOWN_HOSTS }}
-          script: |
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key & known_hosts
+        env:
+          PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          echo "$KNOWN_HOSTS"  > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: SSH & deploy
+        run: |
+          ssh -o StrictHostKeyChecking=yes \
+              ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
             cd unisqoool
             git pull
             npm install
             npm run build
             pm2 restart 0
+          EOF

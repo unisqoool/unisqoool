@@ -1,0 +1,29 @@
+name: Deploy to VPS
+
+# Trigger on every push (merge) to production
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: SSH & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          # disable strict host key checking to avoid interactive prompt
+          known_hosts: |
+            ${{ secrets.KNOWN_HOSTS }}
+          script: |
+            cd unisqoool
+            git pull
+            npm install
+            npm run build
+            pm2 restart 0

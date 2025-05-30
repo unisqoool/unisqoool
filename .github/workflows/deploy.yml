@@ -1,11 +1,14 @@
+# .github/workflows/deploy.yml
 name: Deploy to VPS
 
 on:
   push:
-    branches: [production]
+    branches:
+      - production
 
 jobs:
   deploy:
+    name: SSH & Run Deploy Script
     runs-on: ubuntu-latest
 
     steps:
@@ -18,18 +21,14 @@ jobs:
           KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "$PRIVATE_KEY" > ~/.ssh/id_rsa
+          printf '%s\n' "$PRIVATE_KEY"   > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          printf '%s\n' "$KNOWN_HOSTS"  > ~/.ssh/known_hosts
+          printf '%s\n' "$KNOWN_HOSTS"    > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
-      - name: SSH & deploy
+      - name: SSH & run deploy.sh on VPS
         run: |
           ssh -o StrictHostKeyChecking=yes \
               ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
-              'bash -lc "cd ~/unisqoool && \
-                         git pull && \
-                         npm install && \
-                         npm run build && \
-                         pm2 restart 0"'
+              'bash -l ~/unisqoool/deploy.sh'
